@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Back Button (paste near the top of your page body) -->
+<a class="back-btn" href="index.html"
+   onclick="if (history.length > 1) { history.back(); return false; }">
+  <!-- chevron icon -->
+  <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+  <span>Back to Home</span>
+</a>
+
+<style>
+  /* Back button styling (works standalone) */
+  .back-btn{
+    --line:#e2e8f0; --brand:#0ea5e9;
+    display:inline-flex; align-items:center; gap:.5rem;
+    padding:.55rem .8rem; border:1px solid var(--line);
+    border-radius:10px; text-decoration:none;
+    background:#fff; color:#0b1220; font:600 14px/1.2 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    box-shadow:0 2px 6px rgba(2,8,23,.06); transition:transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+  }
+  .back-btn:hover{ transform:translateY(-1px); box-shadow:0 6px 14px rgba(2,8,23,.10); border-color:var(--brand); color:var(--brand); }
+  .back-btn svg{ display:block }
+</style>
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Harmful Effects – Food Poisoning (Student Notes, Class 11–12)</title>
+<style>
+  :root{
+    --ink:#0b1220; --muted:#475569; --line:#e2e8f0; --card:#f8fafc;
+    --brand:#ef4444; --accent:#0ea5e9; --good:#10b981;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);line-height:1.55;background:#fff}
+  header{padding:24px 16px;background:linear-gradient(120deg,#fee2e2,#e0f2fe);border-bottom:1px solid var(--line)}
+  h1{margin:0 0 6px;font-size:28px}
+  .subtitle{color:var(--muted)}
+  .container{max-width:1100px;margin:auto;padding:16px}
+  .grid{display:grid;gap:16px}
+  @media(min-width:900px){.grid-2{grid-template-columns:1.15fr .85fr}.grid-3{grid-template-columns:repeat(3,1fr)}}
+  section{margin:24px 0}
+  h2{font-size:22px;margin:0 0 10px}
+  h3{font-size:18px;margin:18px 0 8px}
+  table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line)}
+  th,td{padding:10px 12px;border-bottom:1px solid #eef2f6;vertical-align:top}
+  th{text-align:left;background:#f1f5f9}
+  .card{background:var(--card);border:1px solid var(--line);padding:12px;border-radius:10px}
+  .diagram{border:1px solid var(--line);border-radius:12px;padding:8px;background:#fff;margin:10px 0}
+  .pill{display:inline-block;padding:2px 8px;border-radius:999px;border:1px solid var(--line);font-size:12px}
+  .bad{background:#fee2e2;border-color:#fecaca}
+  .ok{background:#ecfeff;border-color:#bae6fd}
+  .tip{background:#f0fdf4;border:1px solid #bbf7d0}
+  ul.tight{margin:8px 0;padding-left:18px}
+  .small{font-size:12px;color:var(--muted)}
+  code.kbd{background:#f1f5f9;padding:1px 6px;border-radius:6px}
+</style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Harmful Effects — Food Poisoning</h1>
+      <div class="subtitle">History • Definitions • Major Agents • Symptoms & Times • Danger Zone • Control • Top 10 Terms • Missed Concepts</div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Inline SVG Diagram: farm-to-fork hazards -->
+    <figure class="diagram">
+      <svg viewBox="0 0 920 280" xmlns="http://www.w3.org/2000/svg" aria-label="Food Poisoning Pathway">
+        <defs>
+          <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#fee2e2"/><stop offset="100%" stop-color="#e0f2fe"/>
+          </linearGradient>
+          <marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+            <path d="M0,0 L0,6 L6,3 z" fill="#ef4444"/>
+          </marker>
+        </defs>
+        <!-- Stages -->
+        <rect x="20" y="35" width="200" height="70" rx="10" fill="#fff" stroke="#ef4444"/>
+        <rect x="260" y="35" width="220" height="70" rx="10" fill="#fff" stroke="#ef4444"/>
+        <rect x="520" y="35" width="180" height="70" rx="10" fill="url(#g1)" stroke="#ef4444"/>
+        <rect x="730" y="35" width="170" height="70" rx="10" fill="#fff" stroke="#ef4444"/>
+        <!-- Arrows -->
+        <path d="M220,70 L260,70" stroke="#ef4444" stroke-width="3" marker-end="url(#arrow)"/>
+        <path d="M480,70 L520,70" stroke="#ef4444" stroke-width="3" marker-end="url(#arrow)"/>
+        <path d="M700,70 L730,70" stroke="#ef4444" stroke-width="3" marker-end="url(#arrow)"/>
+        <!-- Text -->
+        <g font-family="Inter,Arial" font-size="14" fill="#0b1220">
+          <text x="35" y="60"><tspan font-weight="600">Contamination</tspan></text>
+          <text x="35" y="80">Soil, animals, handlers, water</text>
+          <text x="35" y="100">Cross-contamination (raw → ready-to-eat)</text>
+
+          <text x="275" y="60"><tspan font-weight="600">Growth</tspan></text>
+          <text x="275" y="80">Warmth (5–60 °C), time, moisture</text>
+          <text x="275" y="100">Poor chilling/hot-holding</text>
+
+          <text x="535" y="60"><tspan font-weight="600">Toxin / High dose</tspan></text>
+          <text x="535" y="80">Pre-formed toxins (e.g., Staph.)</text>
+          <text x="535" y="100">Spores (B. cereus, Clostridia)</text>
+
+          <text x="745" y="60"><tspan font-weight="600">Illness</tspan></text>
+          <text x="745" y="80">Nausea, vomiting, diarrhea</text>
+          <text x="745" y="100">Neurologic (botulism)</text>
+        </g>
+      </svg>
+      <figcaption>Food poisoning often follows: contamination → growth (in the danger zone) → toxin or high dose → illness.</figcaption>
+    </figure>
+
+    <section class="grid grid-2">
+      <div>
+        <h2>1) Mini-History</h2>
+        <table>
+          <tr><th>Year / Person</th><th>Milestone</th><th>Why it matters</th></tr>
+          <tr><td>1850s–80s</td><td>Pasteur & Koch: germ theory; Koch’s postulates</td><td>Linked microbes to disease</td></tr>
+          <tr><td>1895–1900s</td><td>Food hygiene laws begin</td><td>Milk pasteurization, safer supply</td></tr>
+          <tr><td>20th c.</td><td>Refrigeration & HACCP</td><td>Systematic prevention of hazards</td></tr>
+        </table>
+      </div>
+      <div>
+        <h2>2) What is “Food Poisoning”?</h2>
+        <div class="card">
+          <p><b>Food poisoning</b> = illness after eating unsafe food. Three main paths:</p>
+          <ul class="tight">
+            <li><b>Intoxication:</b> eat a <u>toxin already</u> in food (e.g., Staph. toxin, botulinum toxin) → fast onset.</li>
+            <li><b>Infection:</b> eat <u>live pathogens</u> that grow in gut (e.g., Salmonella, Listeria) → fever/diarrhea.</li>
+            <li><b>Toxico-infection:</b> eat bacteria that make toxin <u>after</u> ingestion (e.g., Bacillus cereus diarrheal type).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>3) Major Agents (student table)</h2>
+      <table>
+        <tr><th>Agent (type)</th><th>Common foods</th><th>Incubation</th><th>Key symptoms</th><th>Notes</th></tr>
+        <tr><td><b>Staphylococcus aureus</b> (toxin)</td><td>Creamy foods, handled RTE</td><td>1–6 h</td><td>Sudden vomiting, cramps</td><td>Heat-stable toxin; reheating may <i>not</i> help</td></tr>
+        <tr><td><b>Bacillus cereus</b> (toxin—emetic)</td><td>Cooked rice kept warm</td><td>1–6 h</td><td>Vomiting</td><td>Spores survive; cool rice quickly</td></tr>
+        <tr><td><b>Bacillus cereus</b> (toxico-infection)</td><td>Soups, sauces</td><td>8–16 h</td><td>Diarrhea, cramps</td><td>Toxin formed in gut</td></tr>
+        <tr><td><b>Clostridium botulinum</b> (toxin)</td><td>Improper low-acid canned / vacuum foods</td><td>12–36 h</td><td>Blurred vision, paralysis</td><td>Strictly anaerobic; pH ≤ 4.6 blocks growth</td></tr>
+        <tr><td><b>Salmonella</b> (infection)</td><td>Poultry, eggs, cross-contam.</td><td>6–72 h</td><td>Fever, diarrhea</td><td>Cook thoroughly; avoid raw egg dishes</td></tr>
+        <tr><td><b>Campylobacter</b> (infection)</td><td>Poultry, raw milk</td><td>2–5 d</td><td>Fever, diarrhea (often severe)</td><td>Undercooked chicken is a key risk</td></tr>
+        <tr><td><b>E. coli</b> O157:H7 (infection)</td><td>Undercooked beef, raw produce</td><td>1–10 d</td><td>Bloody diarrhea</td><td>Low dose can infect; avoid cross-contam.</td></tr>
+        <tr><td><b>Listeria monocytogenes</b> (infection)</td><td>RTE meats, soft cheeses</td><td>3–70 d</td><td>Flu-like; serious in pregnancy</td><td>Can grow in fridge; high-risk groups</td></tr>
+        <tr><td><b>Vibrio</b> spp. (infection)</td><td>Seafood (raw/undercooked)</td><td>4–96 h</td><td>Diarrhea, cramps</td><td>Often summer, coastal areas</td></tr>
+        <tr><td><b>Norovirus</b> (viral infection)</td><td>Salads, shellfish; handlers</td><td>12–48 h</td><td>Vomiting, diarrhea</td><td>Very contagious; hand hygiene critical</td></tr>
+      </table>
+      <p class="small">RTE: Ready-to-eat; “Incubation” = time from eating to first symptoms.</p>
+    </section>
+
+    <section class="grid grid-2">
+      <div>
+        <h2>4) Danger Zone • Time • pH • Moisture</h2>
+        <table>
+          <tr><th>Control item</th><th>Student number</th><th>Why</th></tr>
+          <tr><td><b>Danger zone</b></td><td>5–60 °C</td><td>Fast growth of many pathogens</td></tr>
+          <tr><td><b>Cook (general)</b></td><td>≥ 75 °C core</td><td>Kill vegetative cells</td></tr>
+          <tr><td><b>Chill storage</b></td><td>≤ 4 °C</td><td>Slow growth; not all (Listeria!)</td></tr>
+          <tr><td><b>Cooling rule</b></td><td>60→21 °C in ~2 h; to ≤ 4 °C in ~4 h</td><td>Prevents toxin formation</td></tr>
+          <tr><td><b>Acid target</b></td><td>pH ≤ 4.6</td><td>Blocks C. botulinum in foods</td></tr>
+          <tr><td><b>Water activity (a<sub>w</sub>)</b></td><td>Bacteria often need ≥ 0.91</td><td>Drying/salt/sugar help control</td></tr>
+        </table>
+      </div>
+      <div>
+        <h2>5) Quick Recognition (symptoms)</h2>
+        <div class="card">
+          <ul class="tight">
+            <li><b>Fast vomiting (1–6 h)</b> → think <b>Staph. toxin</b> or <b>B. cereus (emetic)</b>.</li>
+            <li><b>Neurologic signs</b> (blurred vision, paralysis) → suspect <b>botulism</b> → <u>medical emergency</u>.</li>
+            <li><b>Bloody diarrhea</b> → consider <b>EHEC</b> (E. coli O157:H7).</li>
+            <li><b>Pregnancy risk</b> → <b>Listeria</b> (avoid soft cheeses/RTE meats unless well-heated).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>6) Prevention & Control (kitchen plan)</h2>
+      <table>
+        <tr><th>Goal</th><th>Action</th><th>Examples</th></tr>
+        <tr><td>Keep clean</td><td>Wash hands; sanitize surfaces; safe water</td><td>Handlers, boards, knives</td></tr>
+        <tr><td>Separate</td><td>Raw vs RTE foods</td><td>Use color-coded boards</td></tr>
+        <tr><td>Cook</td><td>Reach ≥ 75 °C core</td><td>Chicken, reheats</td></tr>
+        <tr><td>Chill</td><td>≤ 4 °C; rapid cooling</td><td>Leftovers, rice</td></tr>
+        <tr><td>Hold hot</td><td>≥ 60 °C</td><td>Buffets, canteens</td></tr>
+        <tr><td>pH & salt</td><td>Pickling/ferment; correct brines</td><td>Pickles, sauerkraut</td></tr>
+        <tr><td>Packaging</td><td>Vacuum/MAP only with low pH/salt</td><td>Prevent anaerobe hazards</td></tr>
+        <tr><td>HACCP</td><td>Identify hazards & critical limits</td><td>Set CCPs: cook, chill, pH</td></tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>7) One-Page Summary: Intoxication vs Infection</h2>
+      <table>
+        <tr><th></th><th>Intoxication</th><th>Infection</th></tr>
+        <tr><td><b>Cause</b></td><td>Pre-formed toxin in food</td><td>Live microbes grow in gut</td></tr>
+        <tr><td><b>Onset</b></td><td>Fast (hours)</td><td>Slower (hours–days)</td></tr>
+        <tr><td><b>Examples</b></td><td>Staph. toxin, botulinum toxin</td><td>Salmonella, Listeria, Campylobacter</td></tr>
+        <tr><td><b>Key control</b></td><td>Time–temp; cooling; hygiene</td><td>Cooking; avoiding cross-contam.</td></tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>8) Top 10 Key Terms (Glossary)</h2>
+      <table>
+        <tr><th>Term</th><th>Student-friendly meaning</th></tr>
+        <tr><td><b>Food intoxication</b></td><td>Illness from toxins already in food (no growth needed in body)</td></tr>
+        <tr><td><b>Food infection</b></td><td>Illness from live microbes that grow inside you</td></tr>
+        <tr><td><b>Toxico-infection</b></td><td>Eat bacteria → they make toxin in gut</td></tr>
+        <tr><td><b>Incubation period</b></td><td>Time from eating to first symptoms</td></tr>
+        <tr><td><b>Infectious dose</b></td><td>Number of cells needed to cause illness</td></tr>
+        <tr><td><b>Danger zone</b></td><td>5–60 °C, where microbes grow quickly</td></tr>
+        <tr><td><b>Cross-contamination</b></td><td>Germs moving from raw → ready-to-eat</td></tr>
+        <tr><td><b>Endospore</b></td><td>Hard resting form (e.g., Bacillus, Clostridium)</td></tr>
+        <tr><td><b>a<sub>w</sub> (water activity)</b></td><td>“Free water” for growth; lower a<sub>w</sub> = safer</td></tr>
+        <tr><td><b>Critical limit</b></td><td>Exact safety number (e.g., ≥ 75 °C cook; pH ≤ 4.6)</td></tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>9) Often-Missed Concepts (marks booster!)</h2>
+      <div class="card tip">
+        <ul class="tight">
+          <li><b>Reheating ≠ fix for toxins:</b> Staph. toxin survives normal reheating.</li>
+          <li><b>Vacuum risk:</b> Low-oxygen packs need <u>low pH/salt</u> to prevent botulism.</li>
+          <li><b>Cooked rice danger:</b> Cool rapidly; don’t keep warm for hours (B. cereus).</li>
+          <li><b>Listeria & fridge:</b> Can grow at ≤ 4 °C; watch RTE meats/soft cheeses.</li>
+          <li><b>2-hour/4-hour rule:</b> Limit time in danger zone during prep/service.</li>
+          <li><b>High-risk groups:</b> Pregnant, infants, elderly, immunocompromised.</li>
+          <li><b>Separate boards/knives:</b> Raw poultry vs salads to avoid cross-contam.</li>
+          <li><b>Water safety:</b> Contaminated water → fresh produce outbreaks.</li>
+          <li><b>Label & date:</b> FIFO/FEFO reduces expired RTE risks.</li>
+          <li><b>Personal hygiene:</b> Food handlers often spread Staph./Norovirus.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>10) Quick Revision (Q & A)</h2>
+      <table>
+        <tr><th>Question</th><th>One-line answer</th></tr>
+        <tr><td>Fast vomiting within 1–6 h suggests?</td><td>Staph. toxin or B. cereus (emetic)</td></tr>
+        <tr><td>Neurologic signs after canned food?</td><td>Suspect botulism → medical help</td></tr>
+        <tr><td>Key temperature numbers?</td><td>Danger zone 5–60 °C; cook ≥ 75 °C; chill ≤ 4 °C</td></tr>
+        <tr><td>pH cut-off against botulism?</td><td>pH ≤ 4.6</td></tr>
+        <tr><td>Safe cooling plan?</td><td>60→21 °C in ~2 h; to ≤ 4 °C in ~4 h</td></tr>
+      </table>
+    </section>
+
+    <footer>Prepared for Class 11–12 • Learn the patterns (agent → food → time → symptom) and the controls (cook, chill, clean, separate, pH, a<sub>w</sub>).</footer>
+  </main>
+</body>
+</html>

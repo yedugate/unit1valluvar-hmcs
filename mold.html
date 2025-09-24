@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Back Button (paste near the top of your page body) -->
+<a class="back-btn" href="index.html"
+   onclick="if (history.length > 1) { history.back(); return false; }">
+  <!-- chevron icon -->
+  <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+  <span>Back to Home</span>
+</a>
+
+<style>
+  /* Back button styling (works standalone) */
+  .back-btn{
+    --line:#e2e8f0; --brand:#0ea5e9;
+    display:inline-flex; align-items:center; gap:.5rem;
+    padding:.55rem .8rem; border:1px solid var(--line);
+    border-radius:10px; text-decoration:none;
+    background:#fff; color:#0b1220; font:600 14px/1.2 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    box-shadow:0 2px 6px rgba(2,8,23,.06); transition:transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+  }
+  .back-btn:hover{ transform:translateY(-1px); box-shadow:0 6px 14px rgba(2,8,23,.10); border-color:var(--brand); color:var(--brand); }
+  .back-btn svg{ display:block }
+</style>
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Mold (Mould) — Student Notes (Class 11–12)</title>
+<style>
+  :root{
+    --ink:#0b1220; --muted:#475569; --line:#e2e8f0; --card:#f8fafc;
+    --brand:#22c55e; --accent:#0ea5e9; --warn:#ef4444;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);line-height:1.55;background:#fff}
+  header{padding:24px 16px;background:linear-gradient(120deg,#ecfeff,#ecfdf5);border-bottom:1px solid var(--line)}
+  h1{margin:0 0 6px;font-size:28px}
+  .subtitle{color:var(--muted)}
+  .container{max-width:1100px;margin:auto;padding:16px}
+  .grid{display:grid;gap:16px}
+  @media(min-width:900px){.grid-2{grid-template-columns:1.1fr .9fr}.grid-3{grid-template-columns:repeat(3,1fr)}}
+  section{margin:24px 0}
+  h2{font-size:22px;margin:0 0 10px}
+  h3{font-size:18px;margin:18px 0 8px}
+  table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line)}
+  th,td{padding:10px 12px;border-bottom:1px solid #eef2f6;vertical-align:top}
+  th{text-align:left;background:#f1f5f9}
+  .card{background:var(--card);border:1px solid var(--line);padding:12px;border-radius:10px}
+  .diagram{border:1px solid var(--line);border-radius:12px;padding:8px;background:#fff}
+  img.hero{width:100%;max-height:360px;object-fit:contain;border-radius:12px;border:1px solid var(--line);background:#fff}
+  .pill{display:inline-block;padding:2px 8px;border-radius:999px;border:1px solid var(--line);font-size:12px}
+  .ok{background:#ecfeff;border-color:#bae6fd}
+  .bad{background:#fff1f2;border-color:#fecdd3}
+  pre.ascii{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px;overflow:auto}
+  footer{margin:28px 0 16px;color:var(--muted);font-size:12px}
+</style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>MOLD (MOULD) — Student-Friendly Notes</h1>
+      <div class="subtitle">History • Types • Growth • Temperature • Moisture • Time • Growth Curve • Control • Food Roles</div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Local image -->
+    <figure class="diagram">
+      <img src="mold.png" alt="Mold (mould) cell/colony diagram" class="hero" />
+      <figcaption>Mold (filamentous fungus): <em>hyphae</em> form a network called <em>mycelium</em>; spores (conidia/sporangiospores) help spread.</figcaption>
+    </figure>
+
+    <section class="grid grid-2">
+      <div>
+        <h2>1) What is Mold?</h2>
+        <p>Molds are **multicellular fungi** that grow as long threads called <b>hyphae</b>. A mass of hyphae is a <b>mycelium</b>, seen as fuzzy growth on bread, fruits, grains, etc. They make airborne <b>spores</b> for spread.</p>
+        <table>
+          <tr><th>Feature</th><th>Simple meaning</th><th>Exam hook</th></tr>
+          <tr><td>Cell type</td><td>Eukaryote (true nucleus)</td><td>Fungal cell wall (chitin)</td></tr>
+          <tr><td>Body plan</td><td>Hyphae → mycelium</td><td>Fuzzy/velvety colonies</td></tr>
+          <tr><td>Reproduction</td><td>Asexual spores (conidia/sporangia)</td><td>Colorful spore heads</td></tr>
+          <tr><td>Oxygen need</td><td>Aerobic (need air)</td><td>Surface growth common</td></tr>
+        </table>
+      </div>
+      <div>
+        <h2>2) History (very short)</h2>
+        <div class="card">
+          <b>Robert Hooke (1665)</b> illustrated microscopic molds; <b>P.A. Micheli (1729)</b> described fungal spores; <b>A. Fleming (1928)</b> observed <em>Penicillium</em> killing bacteria → **penicillin**.
+        </div>
+        <table>
+          <tr><th>Year</th><th>Milestone</th><th>Why it matters</th></tr>
+          <tr><td>1665</td><td>Hooke’s drawings of molds</td><td>Early microscopy of fungi</td></tr>
+          <tr><td>1729</td><td>Micheli describes spores</td><td>Explains mold reproduction</td></tr>
+          <tr><td>1928</td><td>Fleming &amp; <em>Penicillium</em></td><td>Antibiotic discovery</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>3) Mold Types (practical views)</h2>
+      <div class="grid grid-2">
+        <div>
+          <h3>A) By common genera</h3>
+          <table>
+            <tr><th>Genus</th><th>Where you see it</th><th>Note</th></tr>
+            <tr><td><em>Penicillium</em></td><td>Citrus, bread; cheese ripening</td><td>Some species useful in cheese</td></tr>
+            <tr><td><em>Aspergillus</em></td><td>Groundnuts, grains</td><td><b>Aflatoxin</b> risk (A. flavus)</td></tr>
+            <tr><td><em>Rhizopus</em> / <em>Mucor</em></td><td>Bread, fruits</td><td>Fast spoilage (“bread mold”)</td></tr>
+            <tr><td><em>Fusarium</em></td><td>Cereals</td><td>Mycotoxins (fumonisins, trichothecenes)</td></tr>
+          </table>
+        </div>
+        <div>
+          <h3>B) By role</h3>
+          <table>
+            <tr><th>Role</th><th>Examples</th><th>Outcome</th></tr>
+            <tr><td>Useful/industrial</td><td><em>Penicillium roqueforti</em>, <em>P. camemberti</em></td><td>Cheese flavor/texture</td></tr>
+            <tr><td>Koji molds</td><td><em>Aspergillus oryzae</em></td><td>Enzymes for soy sauce/miso</td></tr>
+            <tr><td>Spoilage</td><td><em>Rhizopus</em>, <em>Mucor</em></td><td>Soft rot, off-odors</td></tr>
+            <tr><td>Toxin producers</td><td><em>Aspergillus</em>, <em>Fusarium</em></td><td><b>Mycotoxins</b> in foods</td></tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>4) Growth Needs — FATTOM (with student targets)</h2>
+      <table>
+        <tr><th>Factor</th><th>Helps growth</th><th>Control (simple)</th><th>Targets / Numbers</th></tr>
+        <tr><td>Food</td><td>Carb-rich, fruits, grains, bread</td><td>Reformulate; remove damaged produce</td><td>—</td></tr>
+        <tr><td>Acidity (pH)</td><td>Broad tolerance (~2–8.5)</td><td>Further acidify + permitted preservatives</td><td>Can grow at low pH</td></tr>
+        <tr><td>Temperature</td><td>Many at 10–35 °C</td><td>Chill ≤ 4 °C; heat to kill spores (harder)</td><td>Some grow in fridge (slow)</td></tr>
+        <tr><td>Time</td><td>More time = more growth/spores</td><td>Short holding; quick cooling</td><td>Slower than bacteria</td></tr>
+        <tr><td>Oxygen</td><td>Aerobic (need air)</td><td>Limit O₂ + low pH/aw; surface sealing</td><td>Surface growth typical</td></tr>
+        <tr><td>Moisture (a<sub>w</sub>)</td><td>Grow at lower a<sub>w</sub> than bacteria</td><td><b>Drying</b>; sugar/salt; ventilated storage</td><td>Many molds grow at <b>a<sub>w</sub> ≈ 0.80</b> (or below for xerophiles)</td></tr>
+      </table>
+    </section>
+
+    <section class="grid grid-2">
+      <div>
+        <h2>5) Temperature • Moisture • Time — Quick View</h2>
+        <table>
+          <tr><th>Control item</th><th>Student number</th></tr>
+          <tr><td>Chill storage</td><td>≤ <b>4 °C</b> (slows molds)</td></tr>
+          <tr><td>General safe cooking</td><td>≥ <b>75 °C</b> (destroys many cells)</td></tr>
+          <tr><td>Dry grains (storage)</td><td><b>≤ 13%</b> moisture (typical goal)</td></tr>
+          <tr><td>Water activity</td><td>Keep <b>a<sub>w</sub> &lt; 0.80</b> to limit most molds</td></tr>
+          <tr><td>pH</td><td>Acid foods still risk mold → use hurdles</td></tr>
+        </table>
+      </div>
+      <div>
+        <h2>6) Growth Pattern (Curve)</h2>
+        <pre class="ascii">Biomass
+│       ┌────────── Log (filament extension) ────────┐
+│ Lag ──┘                                            └─ Stationary ── Sporulation
+└──────────────────────── Time ─────────────────────────────────────────
+Tips: keep dry &amp; cool to extend <Lag>, prevent surface oxygen, and remove
+damaged/damp items quickly.
+</pre>
+      </div>
+    </section>
+
+    <section>
+      <h2>7) Molds in Foods — Useful vs Harmful</h2>
+      <div class="grid grid-2">
+        <div>
+          <h3>Beneficial (useful)</h3>
+          <table>
+            <tr><th>Group</th><th>What they do</th><th>Foods</th></tr>
+            <tr><td><em>Penicillium roqueforti</em>, <em>P. camemberti</em></td><td>Ripening enzymes → texture/flavor</td><td>Blue/soft cheeses</td></tr>
+            <tr><td><em>Aspergillus oryzae</em></td><td>Koji enzymes (amylases, proteases)</td><td>Soy sauce, miso</td></tr>
+          </table>
+        </div>
+        <div>
+          <h3>Harmful (spoilage &amp; toxins)</h3>
+          <table>
+            <tr><th>Type</th><th>Examples</th><th>Risk</th></tr>
+            <tr><td>Surface spoilage</td><td><em>Rhizopus, Mucor</em></td><td>Soft rot, off-odors</td></tr>
+            <tr><td>Mycotoxin producers</td><td><em>Aspergillus</em>, <em>Fusarium</em></td><td><b>Aflatoxin</b>, ochratoxin, fumonisin</td></tr>
+          </table>
+        </div>
+      </div>
+      <div class="card" style="margin-top:12px">
+        <b>Important:</b> Cooking/boiling may not destroy <b>mycotoxins</b>. Control moisture, storage and <em>sort out visibly moldy/infested material</em>.
+      </div>
+    </section>
+
+    <section>
+      <h2>8) Identify Quickly (Kitchen/Lab clues)</h2>
+      <table>
+        <tr><th>Clue</th><th>Mold</th><th>Not to confuse with</th></tr>
+        <tr><td>On foods</td><td>Fuzzy/colored patches, often at surface</td><td>Yeasts = slick film; bacteria = slime/cloudiness</td></tr>
+        <tr><td>Microscope</td><td>Long hyphae + spore heads</td><td>Yeasts = oval budding; bacteria = tiny rods/cocci</td></tr>
+        <tr><td>Odor</td><td>Musty/earthy</td><td>Yeasty/alcoholic (yeasts)</td></tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>9) Control — “Hurdle Technology”</h2>
+      <table>
+        <tr><th>Goal</th><th>Method (simple)</th><th>Food example</th></tr>
+        <tr><td>Keep dry</td><td><b>Drying</b>; proper ventilation; desiccants</td><td>Grains, nuts, spices</td></tr>
+        <tr><td>Keep cool</td><td>Chill storage; avoid condensation</td><td>Fruits, bakery</td></tr>
+        <tr><td>Limit oxygen</td><td>Vacuum/MAP + low a<sub>w</sub>/pH</td><td>Packaged foods</td></tr>
+        <tr><td>Acidify</td><td>Fermentation; safe acids</td><td>Pickles, preserves</td></tr>
+        <tr><td>Preservatives (where permitted)</td><td>Sorbates/benzoates/propionates</td><td>Jams, bakery</td></tr>
+        <tr><td>Good storage</td><td>FIFO/FEFO; pest control; clean, dry bins</td><td>Warehouses</td></tr>
+        <tr><td>Sorting</td><td>Remove visibly moldy/damaged kernels</td><td>Peanuts, maize</td></tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>10) Top 10 Key Terms (Glossary)</h2>
+      <table>
+        <tr><th>Term</th><th>Student-friendly meaning</th></tr>
+        <tr><td>Hypha</td><td>Single thread-like filament of a mold</td></tr>
+        <tr><td>Mycelium</td><td>Mass of hyphae (visible fuzz)</td></tr>
+        <tr><td>Conidia</td><td>Asexual spores (e.g., in <em>Penicillium</em>)</td></tr>
+        <tr><td>Sporangium</td><td>Sac holding spores (e.g., <em>Rhizopus</em>)</td></tr>
+        <tr><td>Xerophilic</td><td>Can grow at very low water activity</td></tr>
+        <tr><td>Mycotoxin</td><td>Toxin made by some molds (e.g., aflatoxin)</td></tr>
+        <tr><td>Aflatoxin</td><td>Potent toxin from <em>Aspergillus flavus</em></td></tr>
+        <tr><td>a<sub>w</sub> (water activity)</td><td>“Free water” available for microbes to grow</td></tr>
+        <tr><td>Saprophyte</td><td>Organism that feeds on dead organic matter</td></tr>
+        <tr><td>Koji</td><td>Starter mold culture for soy ferments</td></tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>11) Last-Minute Q &amp; A</h2>
+      <table>
+        <tr><th>Question</th><th>One-line answer</th></tr>
+        <tr><td>Why do molds grow on the surface?</td><td>They need oxygen (aerobic)</td></tr>
+        <tr><td>Minimum a<sub>w</sub> for many molds?</td><td>~<b>0.80</b> (lower than yeasts/bacteria)</td></tr>
+        <tr><td>Do acids stop molds?</td><td>Molds tolerate acid → use multiple hurdles</td></tr>
+        <tr><td>Are mycotoxins destroyed by cooking?</td><td>Often <b>not fully</b>; prevent growth instead</td></tr>
+        <tr><td>Two useful molds in cheese?</td><td><em>P. roqueforti</em>, <em>P. camemberti</em></td></tr>
+        <tr><td>Famous toxin-producing genus on peanuts?</td><td><em>Aspergillus</em> (aflatoxin)</td></tr>
+      </table>
+    </section>
+
+    <footer>Prepared for Class 11–12 • Use with your local <code>mold.png</code> in the same folder</footer>
+  </main>
+</body>
+</html>

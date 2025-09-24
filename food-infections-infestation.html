@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Back Button (paste near the top of your page body) -->
+<a class="back-btn" href="index.html"
+   onclick="if (history.length > 1) { history.back(); return false; }">
+  <!-- chevron icon -->
+  <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+  <span>Back to Home</span>
+</a>
+
+<style>
+  /* Back button styling (works standalone) */
+  .back-btn{
+    --line:#e2e8f0; --brand:#0ea5e9;
+    display:inline-flex; align-items:center; gap:.5rem;
+    padding:.55rem .8rem; border:1px solid var(--line);
+    border-radius:10px; text-decoration:none;
+    background:#fff; color:#0b1220; font:600 14px/1.2 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    box-shadow:0 2px 6px rgba(2,8,23,.06); transition:transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+  }
+  .back-btn:hover{ transform:translateY(-1px); box-shadow:0 6px 14px rgba(2,8,23,.10); border-color:var(--brand); color:var(--brand); }
+  .back-btn svg{ display:block }
+</style>
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Food Infections & Food Infestation — Student Notes (Class 11–12)</title>
+<style>
+  :root{
+    --ink:#0b1220; --muted:#475569; --line:#e2e8f0; --card:#f8fafc;
+    --brand:#0ea5e9; --warn:#ef4444; --good:#10b981; --gold:#f59e0b;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);line-height:1.55;background:#fff}
+  header{padding:24px 16px;background:linear-gradient(120deg,#e0f2fe,#fef9c3);border-bottom:1px solid var(--line)}
+  h1{margin:0 0 6px;font-size:28px}
+  .subtitle{color:var(--muted)}
+  .container{max-width:1100px;margin:auto;padding:16px}
+  .grid{display:grid;gap:16px}
+  @media(min-width:900px){.grid-2{grid-template-columns:1.1fr .9fr}.grid-3{grid-template-columns:repeat(3,1fr)}}
+  section{margin:24px 0}
+  h2{font-size:22px;margin:0 0 10px}
+  h3{font-size:18px;margin:18px 0 8px}
+  table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line)}
+  th,td{padding:10px 12px;border-bottom:1px solid #eef2f6;vertical-align:top}
+  th{text-align:left;background:#f1f5f9}
+  .card{background:var(--card);border:1px solid var(--line);padding:12px;border-radius:10px}
+  .diagram{border:1px solid var(--line);border-radius:12px;padding:8px;background:#fff;margin:10px 0}
+  .pill{display:inline-block;padding:2px 8px;border-radius:999px;border:1px solid var(--line);font-size:12px}
+  .bad{background:#fee2e2;border-color:#fecaca}
+  .ok{background:#ecfeff;border-color:#bae6fd}
+  .tip{background:#f0fdf4;border:1px solid #bbf7d0}
+  ul.tight{margin:8px 0;padding-left:18px}
+  .small{font-size:12px;color:var(--muted)}
+  code.kbd{background:#f1f5f9;padding:1px 6px;border-radius:6px}
+</style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Food Infections & Food Infestation</h1>
+      <div class="subtitle">History • Definitions • Major Agents • Symptoms & Times • Storage Pests • Control • Top 10 Terms • Missed Concepts</div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Inline SVG Diagram: two pathways -->
+    <figure class="diagram">
+      <svg viewBox="0 0 920 300" xmlns="http://www.w3.org/2000/svg" aria-label="Food infection vs food infestation">
+        <defs>
+          <linearGradient id="gA" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#e0f2fe"/><stop offset="100%" stop-color="#dcfce7"/></linearGradient>
+          <marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+            <path d="M0,0 L0,6 L6,3 z" fill="#0ea5e9"/></marker>
+        </defs>
+        <!-- Common start -->
+        <rect x="30" y="30" width="200" height="60" rx="10" fill="url(#gA)" stroke="#0ea5e9"/>
+        <text x="45" y="60" font-family="Inter,Arial" font-size="14">Contaminated food</text>
+        <!-- Split arrows -->
+        <path d="M230,60 L360,60" stroke="#0ea5e9" stroke-width="3" marker-end="url(#arrow)"/>
+        <path d="M130,90 L130,140 L360,140" stroke="#0ea5e9" stroke-width="3" marker-end="url(#arrow)"/>
+        <!-- Food Infection path -->
+        <rect x="360" y="30" width="220" height="60" rx="10" fill="#fff" stroke="#0ea5e9"/>
+        <text x="375" y="55" font-family="Inter,Arial" font-size="14">Food infection</text>
+        <text x="375" y="75" font-family="Inter,Arial" font-size="12">Eat live microbes → grow in body</text>
+        <rect x="620" y="30" width="260" height="60" rx="10" fill="#fff" stroke="#0ea5e9"/>
+        <text x="635" y="55" font-family="Inter,Arial" font-size="14">Symptoms</text>
+        <text x="635" y="75" font-family="Inter,Arial" font-size="12">Fever, diarrhea, cramps (hrs–days)</text>
+        <path d="M580,60 L620,60" stroke="#0ea5e9" stroke-width="3" marker-end="url(#arrow)"/>
+        <!-- Food Infestation path -->
+        <rect x="360" y="110" width="220" height="60" rx="10" fill="#fff" stroke="#f59e0b"/>
+        <text x="375" y="135" font-family="Inter,Arial" font-size="14">Food infestation</text>
+        <text x="375" y="155" font-family="Inter,Arial" font-size="12">Insects/mites/rodents in food</text>
+        <rect x="620" y="110" width="260" height="60" rx="10" fill="#fff" stroke="#f59e0b"/>
+        <text x="635" y="135" font-family="Inter,Arial" font-size="14">Damage</text>
+        <text x="635" y="155" font-family="Inter,Arial" font-size="12">Holes, webbing, droppings, loss</text>
+        <path d="M580,140 L620,140" stroke="#f59e0b" stroke-width="3" marker-end="url(#arrow)"/>
+        <!-- Controls -->
+        <rect x="220" y="210" width="480" height="60" rx="10" fill="#fff" stroke="#10b981"/>
+        <text x="235" y="240" font-family="Inter,Arial" font-size="14">Controls: Cook ≥75°C • Chill ≤4°C • Dry/low a<wbr/>w • Hygiene • Pest-proof storage • FIFO/FEFO • IPM</text>
+      </svg>
+      <figcaption>Food infection = illness by living microbes; Food infestation = pests contaminating or consuming stored foods.</figcaption>
+    </figure>
+
+    <section class="grid grid-2">
+      <div>
+        <h2>1) Mini-History (exam-friendly)</h2>
+        <table>
+          <tr><th>Year / Person</th><th>Milestone</th><th>Why it matters</th></tr>
+          <tr><td>1850s–80s</td><td>Pasteur (germ theory), Koch (postulates)</td><td>Microbes ↔ disease proved</td></tr>
+          <tr><td>Early 1900s</td><td>Food hygiene laws & pasteurization</td><td>Safer milk & RTE foods</td></tr>
+          <tr><td>Late 1900s</td><td>HACCP & IPM</td><td>Systematic control of hazards & pests</td></tr>
+        </table>
+      </div>
+      <div>
+        <h2>2) Definitions (simple)</h2>
+        <div class="card">
+          <ul class="tight">
+            <li><b>Food infection:</b> Illness after eating <u>live</u> pathogens that multiply in the body (e.g., <i>Salmonella</i>).</li>
+            <li><b>Food intoxication:</b> Illness from <u>pre-formed toxin</u> in food (e.g., Staph. toxin). <i>(for contrast)</i></li>
+            <li><b>Food infestation:</b> Contamination/damage by <u>insects, mites, or rodents</u> in stored foods (e.g., weevils in grains).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>3) Major Food Infections (bacteria, viruses, parasites)</h2>
+      <table>
+        <tr><th>Agent (type)</th><th>Common foods</th><th>Incubation</th><th>Key symptoms</th><th>Notes</th></tr>
+        <tr><td><b>Salmonella</b> (bacterium)</td><td>Poultry, eggs; cross-contam.</td><td>6–72 h</td><td>Fever, diarrhea, cramps</td><td>Cook well; avoid raw egg dishes</td></tr>
+        <tr><td><b>Campylobacter</b> (bacterium)</td><td>Poultry, raw milk</td><td>2–5 d</td><td>Fever, diarrhea (sometimes bloody)</td><td>Undercooked chicken risk</td></tr>
+        <tr><td><b>E. coli</b> O157:H7 (bacterium)</td><td>Undercooked beef, raw produce</td><td>1–10 d</td><td>Bloody diarrhea</td><td>Low infectious dose; avoid cross-contam.</td></tr>
+        <tr><td><b>Listeria monocytogenes</b> (bacterium)</td><td>RTE meats, soft cheeses</td><td>3–70 d</td><td>Flu-like; serious in pregnancy</td><td>Can grow in fridge (≤4 °C)</td></tr>
+        <tr><td><b>Vibrio</b> spp. (bacterium)</td><td>Seafood (raw/undercooked)</td><td>4–96 h</td><td>Diarrhea, cramps</td><td>Warm coastal seasons</td></tr>
+        <tr><td><b>Norovirus</b> (virus)</td><td>Salads, shellfish; handlers</td><td>12–48 h</td><td>Vomiting, diarrhea</td><td>Very contagious; hand hygiene key</td></tr>
+        <tr><td><b>Hepatitis A</b> (virus)</td><td>Raw/undercooked, contaminated water</td><td>2–6 wks</td><td>Fever, jaundice</td><td>Vaccine available; sanitation</td></tr>
+        <tr><td><b>Giardia</b> (parasite)</td><td>Contaminated water/fresh produce</td><td>1–3 wks</td><td>Greasy stools, cramps</td><td>Water treatment important</td></tr>
+        <tr><td><b>Entamoeba histolytica</b> (parasite)</td><td>Contaminated foods/water</td><td>2–4 wks</td><td>Dysentery</td><td>Hygiene & safe water</td></tr>
+        <tr><td><b>Toxoplasma gondii</b> (parasite)</td><td>Undercooked meat; soil</td><td>Days–weeks</td><td>Mild flu-like; severe in pregnancy</td><td>Cook meat; wash produce</td></tr>
+      </table>
+      <p class="small">“Incubation” = time from eating to first symptoms. RTE = Ready-to-eat.</p>
+    </section>
+
+    <section class="grid grid-2">
+      <div>
+        <h2>4) Danger Zone • pH • Moisture • Time</h2>
+        <table>
+          <tr><th>Control item</th><th>Student number</th><th>Why</th></tr>
+          <tr><td><b>Danger zone</b></td><td>5–60 °C</td><td>Fast growth of many pathogens</td></tr>
+          <tr><td><b>Cook (general)</b></td><td>≥ 75 °C core</td><td>Kills vegetative cells</td></tr>
+          <tr><td><b>Chill storage</b></td><td>≤ 4 °C</td><td>Slows growth (not all)</td></tr>
+          <tr><td><b>Cooling rule</b></td><td>60→21 °C in ~2 h; to ≤4 °C in ~4 h</td><td>Prevents toxin formation</td></tr>
+          <tr><td><b>Acid target</b></td><td>pH ≤ 4.6</td><td>Blocks <i>C. botulinum</i> in foods</td></tr>
+          <tr><td><b>Water activity (a<sub>w</sub>)</b></td><td>Bacteria often need ≥ 0.91</td><td>Drying/salt/sugar help</td></tr>
+        </table>
+      </div>
+      <div>
+        <h2>5) Quick Recognition (symptoms)</h2>
+        <div class="card">
+          <ul class="tight">
+            <li><b>Fever + diarrhea</b> → infection (e.g., Salmonella, Campylobacter).</li>
+            <li><b>Bloody diarrhea</b> → think <b>EHEC</b> (E. coli O157:H7).</li>
+            <li><b>Pregnancy risk</b> → <b>Listeria</b> (avoid high-risk RTE foods unless heated).</li>
+            <li><b>Jaundice</b> weeks after eating → consider <b>Hepatitis A</b>.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>6) Food Infestation (stored-product pests)</h2>
+      <div class="grid grid-2">
+        <div>
+          <h3>A) Common pests & signs</h3>
+          <table>
+            <tr><th>Pest</th><th>Typical foods</th><th>Clues</th></tr>
+            <tr><td>Grain weevils / rice moth</td><td>Wheat, rice, pulses</td><td>Holes in kernels, webbing</td></tr>
+            <tr><td>Flour beetles</td><td>Flours, mixes</td><td>Fine dust, off-odors</td></tr>
+            <tr><td>Stored-product mites</td><td>Grains, cheese</td><td>Dusty film, itchiness</td></tr>
+            <tr><td>Rodents</td><td>Any stored foods</td><td>Droppings, gnaw marks, urine trails</td></tr>
+          </table>
+        </div>
+        <div>
+          <h3>B) Prevention (IPM — Integrated Pest Management)</h3>
+          <table>
+            <tr><th>Step</th><th>Action</th><th>Example</th></tr>
+            <tr><td>Inspect</td><td>Check incoming lots</td><td>Reject infested bags</td></tr>
+            <tr><td>Sanitation</td><td>Clean spills; dust removal</td><td>Under racks, corners</td></tr>
+            <tr><td>Storage</td><td>Dry, cool, ventilated; off-floor</td><td>≤ 13% moisture for many grains</td></tr>
+            <tr><td>Proofing</td><td>Seal cracks; tight lids</td><td>Rodent screens, door sweeps</td></tr>
+            <tr><td>Rotation</td><td>FIFO/FEFO; date-label</td><td>Short storage times</td></tr>
+            <tr><td>Monitoring</td><td>Traps; visual checks</td><td>Trend logs</td></tr>
+            <tr><td>Targeted control</td><td>Heat/cold; professional fumigation if needed</td><td>Follow safety rules only by trained staff</td></tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>7) Prevention & Control (kitchen plan)</h2>
+      <table>
+        <tr><th>Goal</th><th>Action</th><th>Examples</th></tr>
+        <tr><td>Keep clean</td><td>Wash hands; sanitize tools; safe water</td><td>Boards, knives, sinks</td></tr>
+        <tr><td>Separate</td><td>Raw vs RTE foods</td><td>Color-coded boards</td></tr>
+        <tr><td>Cook</td><td>Reach ≥ 75 °C core</td><td>Chicken, reheats</td></tr>
+        <tr><td>Chill</td><td>≤ 4 °C; rapid cooling</td><td>Leftovers, rice</td></tr>
+        <tr><td>Hold hot</td><td>≥ 60 °C</td><td>Buffets, service</td></tr>
+        <tr><td>Acid & salt</td><td>Pickling/ferment; correct brines</td><td>Pickles, kraut</td></tr>
+        <tr><td>Packaging</td><td>Vacuum/MAP only with low pH/salt</td><td>Prevent anaerobe risks</td></tr>
+        <tr><td>HACCP + IPM</td><td>Set critical limits; pest program</td><td>Cook temp, pH; seals & traps</td></tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>8) One-Page Contrast: Infection vs Infestation</h2>
+      <table>
+        <tr><th></th><th>Food Infection</th><th>Food Infestation</th></tr>
+        <tr><td><b>Cause</b></td><td>Live microbes ingested</td><td>Insects/mites/rodents contaminate/consume food</td></tr>
+        <tr><td><b>Effect</b></td><td>Illness in the body</td><td>Food damage, contamination, loss</td></tr>
+        <tr><td><b>Signs</b></td><td>Human symptoms (fever, diarrhea)</td><td>Holes, webbing, droppings, larvae</td></tr>
+        <tr><td><b>Controls</b></td><td>Cook/chill, hygiene, safe water</td><td>Dry/cool storage, sealing, traps, rotation</td></tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>9) Top 10 Key Terms (Glossary)</h2>
+      <table>
+        <tr><th>Term</th><th>Student-friendly meaning</th></tr>
+        <tr><td><b>Food infection</b></td><td>Illness after eating live pathogens that multiply in the body</td></tr>
+        <tr><td><b>Food infestation</b></td><td>Stored foods invaded by insects/mites/rodents</td></tr>
+        <tr><td><b>Reservoir</b></td><td>Natural source of a pathogen (animals, soil, water)</td></tr>
+        <tr><td><b>Vector</b></td><td>Carrier that spreads contamination (flies, rodents)</td></tr>
+        <tr><td><b>Cross-contamination</b></td><td>Germs moving from raw to ready-to-eat foods</td></tr>
+        <tr><td><b>a<sub>w</sub> (water activity)</b></td><td>“Free water” for growth; lower a<sub>w</sub> = safer storage</td></tr>
+        <tr><td><b>HACCP</b></td><td>System to control hazards with critical limits (e.g., cook temp, pH)</td></tr>
+        <tr><td><b>IPM</b></td><td>Integrated Pest Management: prevent, monitor, control</td></tr>
+        <tr><td><b>FIFO / FEFO</b></td><td>First-In-First-Out / First-Expired-First-Out stock rotation</td></tr>
+        <tr><td><b>Critical limit</b></td><td>Exact safety target (e.g., ≥ 75 °C core, pH ≤ 4.6)</td></tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>10) Often-Missed Concepts (marks booster!)</h2>
+      <div class="card tip">
+        <ul class="tight">
+          <li><b>Reheating ≠ fix infection risk:</b> If toxin formed earlier, heating may not help; control time-temperature <u>earlier</u>.</li>
+          <li><b>Listeria & fridge:</b> Can grow at ≤ 4 °C—RTE meats/soft cheeses are higher risk.</li>
+          <li><b>Water safety matters:</b> Many infections begin with contaminated water used for washing/ice.</li>
+          <li><b>Low a<sub>w</sub> foods still spoil:</b> Mites/insects thrive in dry stores—keep areas clean & sealed.</li>
+          <li><b>Stock rotation:</b> Long storage ↑ infestation risk; use FIFO/FEFO and date labels.</li>
+          <li><b>Pest proofing:</b> Small gaps allow rodents; install door sweeps & mesh screens.</li>
+          <li><b>Receivals check:</b> Pests often arrive with the goods—inspect bags on delivery.</li>
+          <li><b>Allergens & pests:</b> Insect fragments can trigger reactions—sieving & cleaning matter.</li>
+          <li><b>Waste removal:</b> Spilled grain/sweet residues attract pests—clean immediately.</li>
+          <li><b>Records help:</b> Temp logs, pest-trap logs, cleaning logs = traceability & quick fixes.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>11) Quick Revision (Q & A)</h2>
+      <table>
+        <tr><th>Question</th><th>One-line answer</th></tr>
+        <tr><td>Food infection vs intoxication?</td><td>Live microbe grows in you vs toxin already in food</td></tr>
+        <tr><td>Two signs of infestation in grains?</td><td>Holes/webbing; insect/rodent droppings</td></tr>
+        <tr><td>Danger zone (°C)?</td><td>5–60 °C</td></tr>
+        <tr><td>General safe cook temp?</td><td>≥ 75 °C core</td></tr>
+        <tr><td>Key stock practice for stores?</td><td>FIFO/FEFO + inspection</td></tr>
+      </table>
+    </section>
+
+    <footer>Prepared for Class 11–12 • Learn patterns (agent → food → time → symptom) and storage rules (dry, cool, sealed, rotated).</footer>
+  </main>
+</body>
+</html>

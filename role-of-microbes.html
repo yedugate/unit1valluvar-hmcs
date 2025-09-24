@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Back Button (paste near the top of your page body) -->
+<a class="back-btn" href="index.html"
+   onclick="if (history.length > 1) { history.back(); return false; }">
+  <!-- chevron icon -->
+  <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+  <span>Back to Home</span>
+</a>
+
+<style>
+  /* Back button styling (works standalone) */
+  .back-btn{
+    --line:#e2e8f0; --brand:#0ea5e9;
+    display:inline-flex; align-items:center; gap:.5rem;
+    padding:.55rem .8rem; border:1px solid var(--line);
+    border-radius:10px; text-decoration:none;
+    background:#fff; color:#0b1220; font:600 14px/1.2 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    box-shadow:0 2px 6px rgba(2,8,23,.06); transition:transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+  }
+  .back-btn:hover{ transform:translateY(-1px); box-shadow:0 6px 14px rgba(2,8,23,.10); border-color:var(--brand); color:var(--brand); }
+  .back-btn svg{ display:block }
+</style>
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Role of Microbes in Food Preparation — Student Notes (Class 11–12)</title>
+<style>
+  :root{
+    --ink:#0b1220; --muted:#475569; --line:#e2e8f0; --card:#f8fafc;
+    --brand:#0ea5e9; --accent:#10b981; --warn:#ef4444;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);line-height:1.55;background:#fff}
+  header{padding:24px 16px;background:linear-gradient(120deg,#e0f2fe,#ecfeff);border-bottom:1px solid var(--line)}
+  h1{margin:0 0 6px;font-size:28px}
+  .subtitle{color:var(--muted)}
+  .container{max-width:1100px;margin:auto;padding:16px}
+  .grid{display:grid;gap:16px}
+  @media(min-width:900px){.grid-2{grid-template-columns:1.1fr .9fr}.grid-3{grid-template-columns:repeat(3,1fr)}}
+  section{margin:24px 0}
+  h2{font-size:22px;margin:0 0 10px}
+  h3{font-size:18px;margin:18px 0 8px}
+  table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line)}
+  th,td{padding:10px 12px;border-bottom:1px solid #eef2f6;vertical-align:top}
+  th{text-align:left;background:#f1f5f9}
+  .card{background:var(--card);border:1px solid var(--line);padding:12px;border-radius:10px}
+  .diagram{border:1px solid var(--line);border-radius:12px;padding:8px;background:#fff;margin:10px 0}
+  .pill{display:inline-block;padding:2px 8px;border-radius:999px;border:1px solid var(--line);font-size:12px}
+  .ok{background:#ecfeff;border-color:#bae6fd}
+  .tip{background:#f0fdf4;border:1px solid #bbf7d0}
+  footer{margin:28px 0 16px;color:var(--muted);font-size:12px}
+  ul.tight{margin:8px 0;padding-left:18px}
+</style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Role of Microbes in Food Preparation</h1>
+      <div class="subtitle">History • Microbes & Products • Processes • Benefits • Safety & Control • Top 10 Terms • What students often miss</div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Inline SVG Concept Diagram -->
+    <figure class="diagram">
+      <svg viewBox="0 0 820 250" xmlns="http://www.w3.org/2000/svg" aria-label="Microbes in Food Preparation Flow">
+        <defs>
+          <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#e0f2fe"/><stop offset="100%" stop-color="#dcfce7"/>
+          </linearGradient>
+        </defs>
+        <!-- Boxes -->
+        <rect x="20" y="30" width="200" height="70" rx="10" fill="url(#g1)" stroke="#0ea5e9"/>
+        <rect x="300" y="30" width="220" height="70" rx="10" fill="#fff" stroke="#0ea5e9"/>
+        <rect x="600" y="30" width="200" height="70" rx="10" fill="#fff" stroke="#0ea5e9"/>
+        <rect x="160" y="150" width="230" height="70" rx="10" fill="#fff" stroke="#10b981"/>
+        <rect x="440" y="150" width="230" height="70" rx="10" fill="#fff" stroke="#10b981"/>
+        <!-- Arrows -->
+        <path d="M220,65 L300,65" stroke="#0ea5e9" stroke-width="3" marker-end="url(#a)"/>
+        <path d="M520,65 L600,65" stroke="#0ea5e9" stroke-width="3" marker-end="url(#a)"/>
+        <path d="M700,100 L700,150" stroke="#10b981" stroke-width="3" marker-end="url(#a)"/>
+        <path d="M410,100 L275,150" stroke="#10b981" stroke-width="3" marker-end="url(#a)"/>
+        <path d="M410,100 L555,150" stroke="#10b981" stroke-width="3" marker-end="url(#a)"/>
+        <!-- Arrowhead -->
+        <defs><marker id="a" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L6,3 z" fill="#0ea5e9"/></marker></defs>
+        <!-- Text -->
+        <g font-family="Inter,Arial" font-size="14" fill="#0b1220">
+          <text x="35" y="55">Raw substrates</text>
+          <text x="35" y="75">• Milk • Grains • Pulses • Fruits</text>
+          <text x="35" y="95">• Tea/Coffee/Cocoa • Vegetables</text>
+
+          <text x="320" y="55">Microbes / Starters</text>
+          <text x="320" y="75">LAB (Lactic acid bacteria), Yeasts, Moulds</text>
+          <text x="320" y="95">Acetic bacteria, SCOBY, Koji, Probiotics</text>
+
+          <text x="620" y="55">Primary Changes</text>
+          <text x="620" y="75">Acid, Alcohol, CO₂, Enzymes</text>
+          <text x="620" y="95">Texture & Flavor precursors</text>
+
+          <text x="180" y="175">Products & Processes</text>
+          <text x="180" y="195">Curd, Cheese, Idli/Dosa, Bread</text>
+          <text x="180" y="215">Pickles, Vinegar, Soy sauce</text>
+
+          <text x="460" y="175">Benefits & Safety</text>
+          <text x="460" y="195">Shelf-life ↑ • Flavor ↑ • Nutrition ↑</text>
+          <text x="460" y="215">pH ↓ • Pathogens ↓ (with control)</text>
+        </g>
+      </svg>
+      <figcaption>Microbes convert raw substrates into value-added foods via fermentation and enzymatic actions.</figcaption>
+    </figure>
+
+    <section class="grid grid-2">
+      <div>
+        <h2>1) History (very short & exam-friendly)</h2>
+        <table>
+          <tr><th>Year/Person</th><th>Milestone</th><th>Why it matters</th></tr>
+          <tr><td>Ancient</td><td>Accidental fermentations</td><td>Bread, curd, pickles discovered empirically</td></tr>
+          <tr><td>1850s–60s — Pasteur</td><td>Fermentation is a living process</td><td>Yeast/LAB cause alcohol/acid → birth of microbiology</td></tr>
+          <tr><td>1870s — Hansen</td><td>Pure yeast cultures</td><td>Reliable baking/brewing</td></tr>
+          <tr><td>20th c.</td><td>Starter culture industry</td><td>Consistent quality, safety, flavor</td></tr>
+        </table>
+      </div>
+      <div>
+        <h2>2) Why microbes in food?</h2>
+        <div class="card">
+          <ul class="tight">
+            <li><b>Flavor & texture:</b> organic acids, alcohol, CO₂, enzymes.</li>
+            <li><b>Safety:</b> pH falls, bacteriocins (e.g., nisin) can suppress pathogens.</li>
+            <li><b>Shelf-life:</b> acid/low a<sub>w</sub> slows spoilage microbes.</li>
+            <li><b>Nutrition:</b> better digestibility, vitamin/peptide formation.</li>
+            <li><b>Economy:</b> value addition (cheese, soy sauces, cocoa/coffee processing).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>3) Microbes → Foods (who does what?)</h2>
+      <div class="grid grid-2">
+        <div>
+          <h3>A) Dairy, Cereals & Legumes</h3>
+          <table>
+            <tr><th>Food</th><th>Main microbe(s)</th><th>What happens</th><th>Benefit</th></tr>
+            <tr><td>Curd/Yoghurt</td><td><i>Streptococcus thermophilus</i>, <i>Lactobacillus</i> spp.</td><td>Lactose → lactic acid</td><td>pH↓, thick texture, tang</td></tr>
+            <tr><td>Cheese</td><td>LAB; ripening moulds/yeasts</td><td>Acid+enzymes; ripening</td><td>Varied flavors & textures</td></tr>
+            <tr><td>Idli/Dosa batter</td><td>LAB + yeasts (wild)</td><td>Acid + CO₂</td><td>Leavening, digestibility</td></tr>
+            <tr><td>Bread</td><td><i>Saccharomyces cerevisiae</i></td><td>Glucose → CO₂ + ethanol</td><td>Rise (leavening), flavor</td></tr>
+          </table>
+        </div>
+        <div>
+          <h3>B) Fruits, Vegetables & Protein foods</h3>
+          <table>
+            <tr><th>Food</th><th>Main microbe(s)</th><th>What happens</th><th>Benefit</th></tr>
+            <tr><td>Pickles, Sauerkraut</td><td>LAB (wild or starter)</td><td>Sugars → lactic acid</td><td>Preservation, sour taste</td></tr>
+            <tr><td>Vinegar</td><td><i>Acetobacter</i> spp.</td><td>Ethanol → acetic acid</td><td>Acid preservative</td></tr>
+            <tr><td>Soy sauce/Miso</td><td><i>Aspergillus oryzae</i> (koji) + LAB/yeast</td><td>Enzymes release amino acids; ferment</td><td>Umami, aroma development</td></tr>
+            <tr><td>Natto/Tempeh</td><td><i>Bacillus subtilis</i> / <i>Rhizopus</i></td><td>Protein modification</td><td>Flavor, texture, nutrients</td></tr>
+          </table>
+        </div>
+      </div>
+      <div class="grid grid-2">
+        <div>
+          <h3>C) Beverages & Cocoa/Coffee</h3>
+          <table>
+            <tr><th>Food</th><th>Main microbe(s)</th><th>Key change</th><th>Outcome</th></tr>
+            <tr><td>Wine/Beer</td><td>Yeasts (e.g., <i>Saccharomyces</i>)</td><td>Sugars → ethanol + CO₂</td><td>Alcoholic beverage</td></tr>
+            <tr><td>Kombucha</td><td>SCOBY (yeasts + acetic bacteria)</td><td>Tea sugars → acids + gas</td><td>Acidic, fizzy drink</td></tr>
+            <tr><td>Cocoa/Coffee</td><td>Yeasts + LAB + <i>Acetobacter</i></td><td>Pulp ferment → heat & acids</td><td>Flavor precursor formation</td></tr>
+          </table>
+        </div>
+        <div>
+          <h3>D) Probiotics & Biopreservation</h3>
+          <table>
+            <tr><th>Use</th><th>Microbe(s)</th><th>Mechanism</th><th>Benefit</th></tr>
+            <tr><td>Probiotic foods</td><td><i>Lactobacillus</i>, <i>Bifidobacterium</i></td><td>Live cultures (strain-specific)</td><td>Gut benefits (supportive)</td></tr>
+            <tr><td>Biopreservation</td><td>LAB producing bacteriocins</td><td>Nisin & acids inhibit pathogens</td><td>Extended shelf-life</td></tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid grid-2">
+      <div>
+        <h2>4) Processes & Conditions (student numbers)</h2>
+        <table>
+          <tr><th>Process</th><th>Typical Conditions</th><th>Why</th></tr>
+          <tr><td>Lactic ferment</td><td>~20–37 °C; aerobic/anaerobic; salt controls flora</td><td>Acidify fast; flavor; safe pH</td></tr>
+          <tr><td>Yeast leaven</td><td>~25–30 °C dough temp; sugars present</td><td>CO₂ for rise; aroma</td></tr>
+          <tr><td>Acetification</td><td>Oxygen required; ~25–30 °C</td><td>Ethanol → acetic acid</td></tr>
+          <tr><td>Koji making</td><td>Warm, humid for mould growth</td><td>Enzymes (amylase, protease)</td></tr>
+        </table>
+      </div>
+      <div>
+        <h2>5) Benefits vs Risks (balance)</h2>
+        <table>
+          <tr><th>Aspect</th><th>Positive</th><th>Control point</th></tr>
+          <tr><td>pH & acids</td><td>Pathogens reduced</td><td>Reach pH ≤ ~4.6 quickly</td></tr>
+          <tr><td>Competition</td><td>Starters outcompete spoilers</td><td>Use pure, active cultures</td></tr>
+          <tr><td>Flavor</td><td>Esters, diacetyl, umami</td><td>Avoid over-acid/over-ripening</td></tr>
+          <tr><td>Nutrients</td><td>Bioavailability ↑, vitamins</td><td>Time/temperature control</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>6) Safety & Control (simple plan)</h2>
+      <div class="card tip">
+        <b>Starter + Salt/Acid + Temperature + Hygiene = Safe Fermentation</b>
+        <ul class="tight">
+          <li><b>Use starters</b> (pure cultures) or healthy back-slopping.</li>
+          <li><b>Salt/Acid</b> to select good microbes and speed acidification.</li>
+          <li><b>Temperature</b> in correct range; avoid long “danger zone” (5–60 °C) when not intended.</li>
+          <li><b>Hygiene</b>: clean vessels; avoid cross-contamination.</li>
+          <li><b>Packaging</b>: oxygen control (vacuum/MAP) only with appropriate pH/salt.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>7) Quick ID: Which microbe typically does…?</h2>
+      <table>
+        <tr><th>Change</th><th>Likely Microbe(s)</th><th>Example</th></tr>
+        <tr><td>Acid (lactic)</td><td>LAB</td><td>Curd, pickles</td></tr>
+        <tr><td>Gas (CO₂)</td><td>Yeasts</td><td>Bread, idli/dosa with LAB</td></tr>
+        <tr><td>Acid (acetic)</td><td><i>Acetobacter</i></td><td>Vinegar</td></tr>
+        <tr><td>Enzyme release</td><td>Moulds (koji)</td><td>Soy sauce, miso</td></tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>8) Top 10 Key Terms (Glossary)</h2>
+      <table>
+        <tr><th>Term</th><th>Student-friendly meaning</th></tr>
+		 
+		 <tr><td><b>Zymology or zymurgy</b></td><td>Study of fermentation</td></tr>
+        <tr><td><b>Fermentation</b></td><td>Microbial conversion of sugars → acids, alcohol, CO₂</td></tr>
+        <tr><td><b>Starter culture</b></td><td>Selected microbes added to begin a fermentation</td></tr>
+        <tr><td><b>Back-slopping</b></td><td>Using a little of a previous good batch to start the next</td></tr>
+        <tr><td><b>LAB</b> (Lactic Acid Bacteria)</td><td>Bacteria that make lactic acid (curd, pickles)</td></tr>
+        <tr><td><b>Koji</b></td><td>Mould-grown grain (e.g., <i>Aspergillus oryzae</i>) rich in enzymes</td></tr>
+        <tr><td><b>Leavening</b></td><td>Gas production (CO₂) that makes dough rise</td></tr>
+        <tr><td><b>Bacteriocin</b></td><td>Protein made by some bacteria that inhibits other bacteria (e.g., nisin)</td></tr>
+        <tr><td><b>Biopreservation</b></td><td>Using microbes or their products to preserve food</td></tr>
+        <tr><td><b>Probiotic</b></td><td>Live microbes that, when eaten in adequate amounts, may give health benefits</td></tr>
+        <tr><td><b>SCOBY</b></td><td>Symbiotic culture of bacteria & yeast (kombucha)</td></tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>9) Often-Missed Concepts (don’t forget!)</h2>
+      <table>
+        <tr><th>Concept</th><th>1-line reminder</th></tr>
+        <tr><td><b>Wild vs Pure cultures</b></td><td>Wild gives unique flavors; pure cultures give consistency & safety.</td></tr>
+        <tr><td><b>Salt selection</b></td><td>Right % salt favors LAB and suppresses spoilers in pickles.</td></tr>
+        <tr><td><b>pH targets</b></td><td>Reach low pH quickly for safety (many aim ≤ ~4.6).</td></tr>
+        <tr><td><b>Oxygen control</b></td><td>Acetobacter needs O₂ (vinegar); lactic ferments may be low-O₂.</td></tr>
+        <tr><td><b>Enzyme-led changes</b></td><td>Koji enzymes create amino acids/peptides → umami.</td></tr>
+        <tr><td><b>Post-fermentation handling</b></td><td>Cold storage slows over-acidification & spoilage.</td></tr>
+        <tr><td><b>Mycotoxins ≠ cells</b></td><td>Heating may kill moulds but not necessarily their toxins.</td></tr>
+        <tr><td><b>Toxico-infection vs intoxication</b></td><td>Live growth in gut vs pre-formed toxin in food.</td></tr>
+        <tr><td><b>Back-slop health</b></td><td>Use healthy, sour, pleasant previous batch only.</td></tr>
+        <tr><td><b>Hurdle mindset</b></td><td>Combine mild hurdles (salt, acid, temp, hygiene) for safe products.</td></tr>
+      </table>
+    </section>
+
+    <footer>Prepared for Class 11–12 • Student-friendly summary of how microbes help make foods tastier, safer, and longer-lasting.</footer>
+  </main>
+</body>
+</html>

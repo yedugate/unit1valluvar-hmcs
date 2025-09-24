@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Food Microbiology – Diagram Gallery</title>
+<style>
+  :root{
+    --ink:#0f172a; --muted:#475569; --bg:#f8fafc; --card:#ffffff; --border:#e2e8f0;
+    --shadow:0 10px 28px rgba(2,6,23,.12); --radius:14px;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Arial}
+  .wrap{max-width:1200px;margin:auto;padding:18px 14px}
+  header{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+  h1{margin:0;font-size:clamp(22px,4vw,34px)}
+  .subtitle{margin:2px 0 0;color:var(--muted)}
+  .back{appearance:none;border:1px solid var(--border);background:var(--card);padding:8px 12px;border-radius:10px;cursor:pointer}
+  .back:hover{box-shadow:var(--shadow)}
+
+  /* Grid */
+  .grid{display:grid;gap:14px;grid-template-columns:repeat(1,minmax(0,1fr));margin-top:14px}
+  @media(min-width:720px){.grid{grid-template-columns:repeat(2,1fr)}}
+  @media(min-width:1024px){.grid{grid-template-columns:repeat(3,1fr)}}
+  figure{
+    margin:0;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;
+    transition:transform .12s,border-color .2s,box-shadow .2s
+  }
+  figure:hover{transform:translateY(-2px);border-color:#cbd5e1;box-shadow:var(--shadow)}
+  .thumb{aspect-ratio:4/3;width:100%;height:100%;object-fit:contain;display:block;background:#eef2ff}
+  figcaption{padding:10px 12px;color:var(--muted);font-size:13px}
+
+  /* Lightbox */
+  .lightbox{position:fixed;inset:0;background:#0b1220f2;display:none;place-items:center;z-index:40}
+  .lightbox.active{display:grid}
+  .viewer{max-width:min(96vw,1100px);max-height:86vh;display:grid;gap:10px}
+  .viewer img{width:100%;height:100%;object-fit:contain;border-radius:12px;background:#0b1220}
+  .bar{display:flex;align-items:center;justify-content:space-between;color:#e5eefc;font-size:14px}
+  .btn{appearance:none;border:1px solid #1f2937;background:#0f172a;color:#e5eefc;border-radius:10px;padding:8px 10px;cursor:pointer}
+  .btn:hover{background:#111827}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>Food Microbiology – Diagram Gallery</h1>
+      <p class="subtitle">Prokaryote vs Eukaryote • Shapes • Gram Stain • Growth • Streak Plate • Virus • Yeast/Mold • Autoclave</p>
+    </div>
+    <button class="back" onclick="history.back()">← Back</button>
+  </header>
+
+  <section class="grid" id="grid">
+    <figure data-cap="Prokaryotic vs Eukaryotic cell">
+      <img class="thumb" src="img1.png" alt="Prokaryotic cell vs Eukaryotic cell">
+      <figcaption>1) Prokaryotic vs Eukaryotic cell</figcaption>
+    </figure>
+
+    <figure data-cap="Bacterial shapes & arrangements (set 1)">
+      <img class="thumb" src="img2.png" alt="Bacterial shapes and arrangements – set 1">
+      <figcaption>2) Bacterial shapes & arrangements — set 1</figcaption>
+    </figure>
+
+    <figure data-cap="Bacterial shapes & arrangements (set 2)">
+      <img class="thumb" src="img3.png" alt="Bacterial shapes and arrangements – set 2">
+      <figcaption>3) Bacterial shapes & arrangements — set 2</figcaption>
+    </figure>
+
+    <figure data-cap="Gram stain steps & outcomes">
+      <img class="thumb" src="img4.png" alt="Gram stain steps and outcomes">
+      <figcaption>4) Gram stain — steps & outcomes</figcaption>
+    </figure>
+
+    <figure data-cap="Bacterial growth curve">
+      <img class="thumb" src="img5.png" alt="Bacterial growth curve">
+      <figcaption>5) Growth curve — lag, log, stationary, death</figcaption>
+    </figure>
+
+    <figure data-cap="Streak plate method">
+      <img class="thumb" src="img6.png" alt="Streak plate method">
+      <figcaption>6) Streak plate method — isolation of colonies</figcaption>
+    </figure>
+
+    <figure data-cap="Virus structure & lytic/lysogenic cycles">
+      <img class="thumb" src="img7.png" alt="Virus structure and lytic/lysogenic cycles">
+      <figcaption>7) Virus structure & lytic/lysogenic cycles</figcaption>
+    </figure>
+
+    <figure data-cap="Yeast and mold structures">
+      <img class="thumb" src="img8.png" alt="Yeast and mold structures">
+      <figcaption>8) Yeast & mold structures</figcaption>
+    </figure>
+
+    <figure data-cap="Autoclave schematic">
+      <img class="thumb" src="img9.png" alt="Autoclave schematic">
+      <figcaption>9) Autoclave schematic — steam sterilization</figcaption>
+    </figure>
+  </section>
+</div>
+
+<!-- Lightbox viewer -->
+<div class="lightbox" id="lb" aria-hidden="true">
+  <div class="viewer">
+    <div class="bar">
+      <button class="btn" id="prev">⟨ Prev</button>
+      <span id="cap"></span>
+      <button class="btn" id="next">Next ⟩</button>
+    </div>
+    <img id="big" alt="">
+    <div class="bar">
+      <span>Tip: Arrow keys navigate • Esc closes</span>
+      <button class="btn" id="close">Close ✕</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const figs=[...document.querySelectorAll('figure')];
+const lb=document.getElementById('lb');
+const big=document.getElementById('big');
+const cap=document.getElementById('cap');
+let idx=0;
+
+function openLB(i){
+  idx=i;
+  const img=figs[idx].querySelector('img');
+  big.src=img.src; big.alt=img.alt;
+  cap.textContent=figs[idx].dataset.cap || figs[idx].querySelector('figcaption').textContent;
+  lb.classList.add('active'); lb.setAttribute('aria-hidden','false');
+}
+function closeLB(){ lb.classList.remove('active'); lb.setAttribute('aria-hidden','true'); }
+function step(d){ idx=(idx+d+figs.length)%figs.length; openLB(idx); }
+
+figs.forEach((f,i)=>f.addEventListener('click',()=>openLB(i)));
+document.getElementById('close').onclick=closeLB;
+document.getElementById('prev').onclick=()=>step(-1);
+document.getElementById('next').onclick=()=>step(1);
+lb.addEventListener('click',e=>{ if(e.target===lb) closeLB(); });
+document.addEventListener('keydown',e=>{
+  if(!lb.classList.contains('active')) return;
+  if(e.key==='Escape') closeLB();
+  if(e.key==='ArrowRight') step(1);
+  if(e.key==='ArrowLeft') step(-1);
+});
+</script>
+</body>
+</html>

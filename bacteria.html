@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Back Button (paste near the top of your page body) -->
+<a class="back-btn" href="index.html"
+   onclick="if (history.length > 1) { history.back(); return false; }">
+  <!-- chevron icon -->
+  <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+  <span>Back to Home</span>
+</a>
+
+<style>
+  /* Back button styling (works standalone) */
+  .back-btn{
+    --line:#e2e8f0; --brand:#0ea5e9;
+    display:inline-flex; align-items:center; gap:.5rem;
+    padding:.55rem .8rem; border:1px solid var(--line);
+    border-radius:10px; text-decoration:none;
+    background:#fff; color:#0b1220; font:600 14px/1.2 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    box-shadow:0 2px 6px rgba(2,8,23,.06); transition:transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+  }
+  .back-btn:hover{ transform:translateY(-1px); box-shadow:0 6px 14px rgba(2,8,23,.10); border-color:var(--brand); color:var(--brand); }
+  .back-btn svg{ display:block }
+</style>
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>BACTERIA — Student Notes </title>
+<style>
+  :root{
+    --ink:#111;
+    --muted:#555;
+    --accent:#0a7;
+    --bg:#fff;
+    --stripe:#f6f8f9;
+    --border:#e4e7eb;
+  }
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";}
+  .page{max-width:900px;margin:0 auto;padding:24px;}
+  header{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:8px}
+  h1{margin:6px 0 0;font-size:1.9rem;line-height:1.2}
+  .sub{color:var(--muted);font-size:.95rem}
+  .actions{display:flex;gap:8px}
+  .btn{border:1px solid var(--border);background:#fff;border-radius:10px;padding:8px 12px;cursor:pointer}
+  .btn:hover{border-color:#cbd3d9}
+  hr{border:none;border-top:2px solid var(--border);margin:16px 0}
+  figure{margin:0;padding:0}
+  figure img{width:100%;max-height:380px;object-fit:contain;border:1px solid var(--border);border-radius:12px;background:#fff}
+  figcaption{font-size:.9rem;color:var(--muted);margin-top:6px}
+  h2{margin:28px 0 8px;font-size:1.4rem}
+  h3{margin:18px 0 8px;font-size:1.15rem}
+  p{margin:.4rem 0 .6rem}
+  blockquote{margin:10px 0;padding:10px 14px;border-left:4px solid var(--accent);background:#f2fffb;border-radius:8px}
+  table{width:100%;border-collapse:separate;border-spacing:0;margin:10px 0 18px;border:1px solid var(--border);border-radius:12px;overflow:hidden}
+  th,td{padding:10px 12px;vertical-align:top;border-bottom:1px solid var(--border)}
+  thead th{background:#eef7f3;text-align:left}
+  tbody tr:nth-child(even){background:var(--stripe)}
+  code,pre{font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace}
+  pre{background:#fbfcfd;border:1px solid var(--border);border-radius:12px;padding:12px;overflow:auto}
+  .foot{color:var(--muted);font-size:.9rem;margin-top:24px}
+  .toc{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 0}
+  .toc a{font-size:.92rem;border:1px dashed var(--border);padding:4px 10px;border-radius:999px;color:inherit;text-decoration:none}
+  .toc a:hover{background:#f7f9fa}
+  .kicker{font-weight:600;color:#0a7}
+  .page-break{break-after:page}
+  /* Print styles */
+  @media print{
+    .actions, .toc{display:none !important}
+    body{background:#fff}
+    .page{padding:0}
+    header{margin-bottom:0}
+    a{color:inherit;text-decoration:none}
+  }
+</style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div>
+        <div class="kicker">Printable Handout</div>
+        <h1>BACTERIA — Student Notes </h1>
+        <div class="sub">Simple language • neat tables • local diagram slot</div>
+      </div>
+      <div class="actions">
+        <button class="btn" onclick="window.print()">🖨️ Print</button>
+      </div>
+    </header>
+
+    <hr>
+
+    <figure>
+      <!-- Keep bacteria.png in the SAME folder as this HTML -->
+      <img src="bacteria.png" alt="Bacterial cell diagram" />
+      <figcaption>
+        The image above loads your local <strong>bacteria.png</strong>. Use this file as a labeled
+        bacterial cell diagram in class or LMS/Notion exports.
+      </figcaption>
+    </figure>
+
+    <blockquote><strong>Use:</strong> Keep this as a printable handout or paste into your LMS/Notion. The image line above will load your <strong>bacteria.png</strong> (same folder).</blockquote>
+
+    <div class="toc">
+      <a href="#what">1) What are Bacteria?</a>
+      <a href="#history">2) History</a>
+      <a href="#types">3) Types</a>
+      <a href="#fattom">4) Growth Needs (FATTOM)</a>
+      <a href="#tmtime">5) Temp • Moisture • Time</a>
+      <a href="#curve">6) Growth Curve</a>
+      <a href="#foods">7) In Foods</a>
+      <a href="#clues">8) Identify Quickly</a>
+      <a href="#hurdle">9) Hurdle Tech</a>
+      <a href="#glossary">10) Top 10 Terms</a>
+      <a href="#qa">11) Quick Q&amp;A</a>
+    </div>
+
+    <h2 id="what">1) What are Bacteria?</h2>
+    <p>Single-celled <strong>prokaryotes</strong> (no true nucleus), typically <strong>0.5–5 µm</strong> in size. They multiply by <strong>binary fission</strong> (one cell splits into two).</p>
+
+    <table>
+      <thead><tr><th>Feature</th><th>Simple meaning</th><th>Exam hook</th></tr></thead>
+      <tbody>
+        <tr><td>Cell type</td><td>Prokaryote</td><td>DNA in <strong>nucleoid</strong> (not a nucleus)</td></tr>
+        <tr><td>Shapes</td><td><strong>Cocci</strong> (round), <strong>Bacilli</strong> (rod), <strong>Spirilla</strong> (spiral)</td><td>Shape helps identify</td></tr>
+        <tr><td>Reproduction</td><td>Binary fission</td><td><strong>Short generation time</strong> near optimum</td></tr>
+        <tr><td>Seen in foods</td><td>Cloudiness, gas, slime</td><td>Fast growth in moist, near-neutral foods</td></tr>
+      </tbody>
+    </table>
+
+    <h2 id="history">2) History (very short)</h2>
+    <ul>
+      <li><strong>Father of Bacteriology: Robert Koch</strong> — framed <strong>Koch’s postulates</strong> to link a microbe to a disease.</li>
+      <li><strong>Father of Microbiology: Louis Pasteur</strong> — <strong>germ theory</strong>, <strong>pasteurization</strong>, vaccines.</li>
+    </ul>
+
+    <table>
+      <thead><tr><th>Year</th><th>Milestone</th><th>Why it matters</th></tr></thead>
+      <tbody>
+        <tr><td>1676</td><td>van Leeuwenhoek observed bacteria</td><td>First microscopic evidence</td></tr>
+        <tr><td>1860s</td><td>Pasteur proved germ theory</td><td>Linked microbes ↔ spoilage/disease</td></tr>
+        <tr><td>1880s</td><td>Koch’s postulates + pure culture methods</td><td>Foundation of bacteriology</td></tr>
+        <tr><td>1928</td><td>Fleming noticed penicillin</td><td>Start of antibiotic era</td></tr>
+      </tbody>
+    </table>
+
+    <h2 id="types">3) Types of Bacteria (practical views)</h2>
+    <h3>A) By <strong>shape</strong></h3>
+    <table>
+      <thead><tr><th>Shape</th><th>Example</th><th>Note</th></tr></thead>
+      <tbody>
+        <tr><td>Cocci</td><td><em>Staphylococcus</em></td><td>Clusters; handlers’ skin</td></tr>
+        <tr><td>Bacilli</td><td><em>Escherichia</em>, <em>Bacillus</em></td><td>Many food microbes</td></tr>
+        <tr><td>Spirilla/Curved</td><td><em>Campylobacter</em></td><td>Foodborne infection</td></tr>
+      </tbody>
+    </table>
+
+    <h3>B) By <strong>Gram stain</strong></h3>
+    <table>
+      <thead><tr><th>Group</th><th>Examples</th><th>Key point</th></tr></thead>
+      <tbody>
+        <tr><td>Gram-positive</td><td><em>Lactobacillus</em>, <em>Staphylococcus</em>, <em>Bacillus</em></td><td>Thick <strong>peptidoglycan</strong> wall</td></tr>
+        <tr><td>Gram-negative</td><td><em>E. coli</em>, <em>Salmonella</em>, <em>Vibrio</em></td><td>Outer membrane with <strong>LPS</strong></td></tr>
+      </tbody>
+    </table>
+
+    <h3>C) By <strong>oxygen need</strong></h3>
+    <table>
+      <thead><tr><th>Type</th><th>Meaning</th><th>Example</th></tr></thead>
+      <tbody>
+        <tr><td>Aerobic</td><td>Need O₂</td><td><em>Pseudomonas</em></td></tr>
+        <tr><td>Anaerobic</td><td>Harmed by O₂</td><td><em>Clostridium botulinum</em></td></tr>
+        <tr><td>Facultative</td><td>With/without O₂</td><td><em>E. coli</em></td></tr>
+      </tbody>
+    </table>
+
+    <h3>D) By <strong>temperature</strong></h3>
+    <table>
+      <thead><tr><th>Class</th><th>Range (°C)</th><th>Exam hook</th></tr></thead>
+      <tbody>
+        <tr><td>Psychrotroph</td><td>Can grow at 0–7</td><td><strong>Listeria</strong> can grow in fridge</td></tr>
+        <tr><td>Mesophile</td><td>20–45</td><td>Most pathogens</td></tr>
+        <tr><td>Thermophile</td><td>45–70+</td><td>Heat-loving spoilage</td></tr>
+      </tbody>
+    </table>
+
+    <h2 id="fattom">4) Growth Needs — remember <strong>FATTOM</strong></h2>
+    <table>
+      <thead><tr><th>Factor</th><th>Helps growth</th><th>Control (simple)</th><th>Targets / Numbers</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Food</strong> (nutrients)</td><td>Moist, rich</td><td>Add salt/sugar; low-nutrient base</td><td>—</td></tr>
+        <tr><td><strong>Acidity (pH)</strong></td><td>Near neutral (~7)</td><td>Pickling/fermentation</td><td><strong>pH ≤ 4.6</strong> blocks botulinum</td></tr>
+        <tr><td><strong>Temperature</strong></td><td><strong>Danger zone 5–60 °C</strong></td><td>Chill ≤ <strong>4 °C</strong>; cook ≥ <strong>75 °C</strong>; hot-hold ≥ <strong>60 °C</strong></td><td>Cool <strong>60→21 °C</strong> in ~2 h; to <strong>≤4 °C</strong> in ~4 h</td></tr>
+        <tr><td><strong>Time</strong></td><td>Longer stay in danger zone</td><td>2-hour/4-hour rule</td><td>Doubling often <strong>20–30 min</strong></td></tr>
+        <tr><td><strong>Oxygen</strong></td><td>Depends on type</td><td>Vacuum/MAP + low pH/salt</td><td>Beware <strong>anaerobes</strong></td></tr>
+        <tr><td><strong>Moisture (a<sub>W</sub>)</strong></td><td>High a<sub>W</sub> favors growth</td><td>Drying; sugar/salt</td><td>Many bacteria need <strong>a<sub>W</sub> ≥ 0.91</strong></td></tr>
+      </tbody>
+    </table>
+    <blockquote><strong>Tip:</strong> Moulds → lowest water need; then yeasts; <strong>bacteria need the most water</strong>.</blockquote>
+
+    <h2 id="tmtime">5) Temperature, Moisture &amp; Time — quick view</h2>
+    <table>
+      <thead><tr><th>Control item</th><th>Student number to remember</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Danger zone</strong></td><td><strong>5–60 °C</strong></td></tr>
+        <tr><td><strong>Safe cooking (general)</strong></td><td><strong>≥ 75 °C</strong> core</td></tr>
+        <tr><td><strong>Chill storage</strong></td><td><strong>≤ 4 °C</strong></td></tr>
+        <tr><td><strong>Cooling rule</strong></td><td><strong>60→21 °C</strong> in ~2 h, then to <strong>≤4 °C</strong> in ~4 h</td></tr>
+        <tr><td><strong>Water activity (a<sub>W</sub>)</strong></td><td>Bacteria <strong>≥ 0.91</strong>, Yeasts <strong>≥ 0.88</strong>, Moulds <strong>≥ 0.80</strong></td></tr>
+      </tbody>
+    </table>
+
+    <h2 id="curve">6) Growth Pattern (Curve)</h2>
+    <pre><code>Cells
+│        ┌────────── Log (rapid growth) ───────────┐
+│  Lag ──┘                                         └─ Stationary ── Death
+└──────────────────────── Time ───────────────────────────────────────────
+Controls: keep cold to extend <strong>Lag</strong>, acidify/dry to avoid <strong>Log</strong>, heat to kill.
+</code></pre>
+
+    <h2 id="foods">7) Bacteria in Foods — Beneficial vs Harmful</h2>
+    <h3>Beneficial (useful)</h3>
+    <table>
+      <thead><tr><th>Group</th><th>What they do</th><th>Examples</th></tr></thead>
+      <tbody>
+        <tr><td>Lactic acid bacteria (LAB)</td><td>Acidification, flavor, safety</td><td>Curd, yoghurt, cheese</td></tr>
+        <tr><td>Acetic acid bacteria</td><td>Ethanol → acetic acid</td><td>Vinegar</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Harmful (food safety)</h3>
+    <table>
+      <thead><tr><th>Type</th><th>Examples</th><th>Symptoms / Risk</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Infection</strong></td><td><em>Salmonella</em>, <em>Listeria</em>, <em>Campylobacter</em></td><td>Fever, diarrhea</td></tr>
+        <tr><td><strong>Intoxication</strong> (pre-formed toxin)</td><td><em>Staph. aureus</em> toxin; <em>Clostridium botulinum</em> toxin</td><td>Quick vomiting; <strong>botulism</strong> (neuro)</td></tr>
+        <tr><td><strong>Toxico-infection</strong></td><td><em>Bacillus cereus</em></td><td>Vomiting/diarrhea (two syndromes)</td></tr>
+      </tbody>
+    </table>
+
+    <h2 id="clues">8) Identify Quickly (Kitchen/Lab clues)</h2>
+    <table>
+      <thead><tr><th>Clue</th><th>Bacteria</th><th>Yeasts</th><th>Moulds</th></tr></thead>
+      <tbody>
+        <tr><td>On food</td><td>Slime/cloudy/gas</td><td>Thin film/foam in sweet liquids</td><td>Fuzzy colored patches</td></tr>
+        <tr><td>Smell</td><td>Sour/putrid</td><td>Alcoholic/yeasty</td><td>Musty/earthy</td></tr>
+        <tr><td>Microscope</td><td>Tiny rods/rounds</td><td>Oval budding</td><td>Long <strong>hyphae</strong> + spores</td></tr>
+      </tbody>
+    </table>
+
+    <h2 id="hurdle">9) Control — <strong>Hurdle Technology</strong> (combine small barriers)</h2>
+    <table>
+      <thead><tr><th>Goal</th><th>Method (simple words)</th><th>Food examples</th></tr></thead>
+      <tbody>
+        <tr><td>Kill</td><td>Boil/Pasteurize; <strong>Canning</strong>; UHT</td><td>Milk, juices, low-acid cans</td></tr>
+        <tr><td>Slow</td><td>Chill ≤ 4 °C; Hot-hold ≥ 60 °C</td><td>Kitchens, service lines</td></tr>
+        <tr><td>Dry</td><td>Dehydrate; add sugar/salt</td><td>Jams, dried fish</td></tr>
+        <tr><td>Acidify</td><td>Fermentation; vinegar/citric</td><td>Pickles, curd</td></tr>
+        <tr><td>De-oxygenate</td><td>Vacuum/MAP <strong>with</strong> low pH/salt</td><td>Meats, cheese</td></tr>
+        <tr><td>Hygiene</td><td><strong>GHP/GMP</strong>; separate raw/RTE</td><td>All handling</td></tr>
+        <tr><td>Storage</td><td><strong>FIFO/FEFO</strong>; pest-proof</td><td>Grain stores</td></tr>
+      </tbody>
+    </table>
+
+    <h2 id="glossary">10) <strong>Top 10 Key Terms (Glossary)</strong></h2>
+    <table>
+      <thead><tr><th>Term</th><th>Student-friendly meaning</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Nucleoid</strong></td><td>Region where bacterial DNA sits (no nucleus)</td></tr>
+        <tr><td><strong>Binary fission</strong></td><td>One cell splits into two identical cells</td></tr>
+        <tr><td><strong>Generation time</strong></td><td>Time for the population to <strong>double</strong></td></tr>
+        <tr><td><strong>Gram stain</strong></td><td>Lab stain that separates <strong>Gram +</strong> and <strong>Gram −</strong></td></tr>
+        <tr><td><strong>Peptidoglycan</strong></td><td>Bacterial cell wall material (thick in Gram +)</td></tr>
+        <tr><td><strong>Endospore</strong></td><td>Hard resting cell (e.g., <em>Bacillus</em>, <em>Clostridium</em>)</td></tr>
+        <tr><td><strong>Water activity (a<sub>W</sub>)</strong></td><td>“Free water” available for microbes to grow</td></tr>
+        <tr><td><strong>Mesophile</strong></td><td>Bacteria that prefer <strong>20–45 °C</strong></td></tr>
+        <tr><td><strong>Food infection</strong></td><td>Illness after <strong>live bacteria</strong> grow in the body</td></tr>
+        <tr><td><strong>Food intoxication</strong></td><td>Illness after eating <strong>toxins already</strong> in food</td></tr>
+      </tbody>
+    </table>
+
+    <h2 id="qa">11) Last-Minute Revision (Q &amp; A)</h2>
+    <table>
+      <thead><tr><th>Question</th><th>One-line answer</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Father of Bacteriology?</strong></td><td><strong>Robert Koch</strong></td></tr>
+        <tr><td><strong>Father of Microbiology?</strong></td><td><strong>Louis Pasteur</strong></td></tr>
+        <tr><td><strong>Danger zone (°C)?</strong></td><td><strong>5–60 °C</strong></td></tr>
+        <tr><td><strong>Key pH cut-off for safety?</strong></td><td><strong>pH ≤ 4.6</strong> (blocks botulinum growth)</td></tr>
+        <tr><td><strong>Typical a<sub>W</sub> needed by bacteria?</strong></td><td><strong>≥ 0.91</strong></td></tr>
+        <tr><td><strong>Fridge-growing pathogen?</strong></td><td><strong>Listeria monocytogenes</strong></td></tr>
+        <tr><td><strong>Growth phases?</strong></td><td>Lag → Log → Stationary → Death</td></tr>
+      </tbody>
+    </table>
+
+    <p class="foot page-break"><em>End of notes.</em> Want this turned into a styled multi-page booklet or merged with Yeast/Mould notes? Tell me “Combine microbe notes as booklet”.</p>
+  </div>
+<script>
+  // Optional: smooth-scroll for in-page TOC
+  document.querySelectorAll('.toc a').forEach(a=>{
+    a.addEventListener('click', e=>{
+      e.preventDefault();
+      const id=a.getAttribute('href');
+      const el=document.querySelector(id);
+      if(el){ el.scrollIntoView({behavior:'smooth', block:'start'}); }
+      history.replaceState(null,'',id);
+    });
+  });
+</script>
+</body>
+</html>

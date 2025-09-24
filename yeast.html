@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Back Button (paste near the top of your page body) -->
+<a class="back-btn" href="index.html"
+   onclick="if (history.length > 1) { history.back(); return false; }">
+  <!-- chevron icon -->
+  <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+  <span>Back to Home</span>
+</a>
+
+<style>
+  /* Back button styling (works standalone) */
+  .back-btn{
+    --line:#e2e8f0; --brand:#0ea5e9;
+    display:inline-flex; align-items:center; gap:.5rem;
+    padding:.55rem .8rem; border:1px solid var(--line);
+    border-radius:10px; text-decoration:none;
+    background:#fff; color:#0b1220; font:600 14px/1.2 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    box-shadow:0 2px 6px rgba(2,8,23,.06); transition:transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+  }
+  .back-btn:hover{ transform:translateY(-1px); box-shadow:0 6px 14px rgba(2,8,23,.10); border-color:var(--brand); color:var(--brand); }
+  .back-btn svg{ display:block }
+</style>
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Yeast — Student Notes (Class 11–12)</title>
+<style>
+  :root{
+    --ink:#0b1220; --muted:#475569; --line:#e2e8f0; --card:#f8fafc;
+    --brand:#8b5cf6; --accent:#10b981; --warn:#ef4444;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);line-height:1.55;background:#fff}
+  header{padding:24px 16px;background:linear-gradient(120deg,#ede9fe,#ecfeff);border-bottom:1px solid var(--line)}
+  h1{margin:0 0 6px;font-size:28px}
+  .subtitle{color:var(--muted)}
+  .container{max-width:1100px;margin:auto;padding:16px}
+  .grid{display:grid;gap:16px}
+  @media(min-width:900px){.grid-2{grid-template-columns:1.1fr .9fr}.grid-3{grid-template-columns:repeat(3,1fr)}}
+  section{margin:24px 0}
+  h2{font-size:22px;margin:0 0 10px}
+  h3{font-size:18px;margin:18px 0 8px}
+  table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line)}
+  th,td{padding:10px 12px;border-bottom:1px solid #eef2f6;vertical-align:top}
+  th{text-align:left;background:#f1f5f9}
+  .card{background:var(--card);border:1px solid var(--line);padding:12px;border-radius:10px}
+  .diagram{border:1px solid var(--line);border-radius:12px;padding:8px;background:#fff}
+  img.hero{width:100%;max-height:360px;object-fit:contain;border-radius:12px;border:1px solid var(--line);background:#fff}
+  .pill{display:inline-block;padding:2px 8px;border-radius:999px;border:1px solid var(--line);font-size:12px}
+  .ok{background:#ecfeff;border-color:#bae6fd}
+  .bad{background:#fff1f2;border-color:#fecdd3}
+  pre.ascii{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px;overflow:auto}
+  footer{margin:28px 0 16px;color:var(--muted);font-size:12px}
+</style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>YEAST — Student-Friendly Notes</h1>
+      <div class="subtitle">History • Types • Growth • Temperature • Moisture • Time • Growth Curve • Control • Food Roles</div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Local image -->
+    <figure class="diagram">
+      <img src="yeast.png" alt="Yeast cell diagram" class="hero" />
+      <figcaption>Yeast cell (use your local <code>yeast.png</code>) — typical oval cell, budding scar, vacuole, nucleus, mitochondria, cell wall.</figcaption>
+    </figure>
+
+    <section class="grid grid-2">
+      <div>
+        <h2>1) What is Yeast?</h2>
+        <p>Yeasts are **unicellular fungi** (single-celled eukaryotes), typically **3–10 µm**. They reproduce mainly by **budding** and can live with or without oxygen (**facultative anaerobes**). Famous species: <b>Saccharomyces cerevisiae</b> (baker’s/brewer’s yeast).</p>
+        <table>
+          <tr><th>Feature</th><th>Simple meaning</th><th>Exam hook</th></tr>
+          <tr><td>Cell type</td><td>Eukaryote (true nucleus)</td><td>Has nucleus + organelles</td></tr>
+          <tr><td>Reproduction</td><td>Budding (also fission)</td><td>Bud = small outgrowth on parent</td></tr>
+          <tr><td>Metabolism</td><td>Ferments sugars to alcohol + CO₂</td><td>Used in bread/wine/beer</td></tr>
+        </table>
+      </div>
+      <div>
+        <h2>2) History (very short)</h2>
+        <div class="card">
+          <b>Louis Pasteur</b> (19th century) showed that yeast is a living organism that causes **alcoholic fermentation** — a key step in microbiology and food science.
+        </div>
+        <table>
+          <tr><th>Year</th><th>Milestone</th><th>Why it matters</th></tr>
+          <tr><td>1850s–1860s</td><td>Pasteur’s fermentation studies</td><td>Proved yeast drives alcohol + CO₂</td></tr>
+          <tr><td>1876</td><td>Hansen’s pure yeast cultures</td><td>Consistent brewing/baking</td></tr>
+          <tr><td>20th c.</td><td>Industrial yeast production</td><td>Reliable baking and beverages</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>3) Yeast Types (practical views)</h2>
+      <div class="grid grid-2">
+        <div>
+          <h3>A) By use / habitat</h3>
+          <table>
+            <tr><th>Type</th><th>Examples</th><th>Notes</th></tr>
+            <tr><td>Baker’s/Brewer’s</td><td><i>Saccharomyces cerevisiae</i></td><td>Leavening (CO₂), alcohol</td></tr>
+            <tr><td>Dairy yeasts</td><td><i>Kluyveromyces</i> spp.</td><td>Flavor in some ferments</td></tr>
+            <tr><td>Osmophilic (spoilage)</td><td><i>Zygosaccharomyces</i></td><td>Grow in high sugar/acid (jams)</td></tr>
+          </table>
+        </div>
+        <div>
+          <h3>B) By shape/reproduction</h3>
+          <table>
+            <tr><th>Form</th><th>Example</th><th>Clue</th></tr>
+            <tr><td>Budding yeast</td><td><i>Saccharomyces</i></td><td>Bud scars on cell wall</td></tr>
+            <tr><td>Fission yeast</td><td><i>Schizosaccharomyces</i></td><td>Divides like bacteria</td></tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>4) Growth Needs — FATTOM (with student targets)</h2>
+      <table>
+        <tr><th>Factor</th><th>Helps growth</th><th>Control (simple)</th><th>Targets / Numbers</th></tr>
+        <tr><td>Food</td><td>Sugars (glucose, sucrose), amino acids</td><td>Limit sugars; reformulate</td><td>—</td></tr>
+        <tr><td>Acidity (pH)</td><td>Acid-tolerant (≈ pH 3–6)</td><td>Further acidify + preservatives (where allowed)</td><td>pH &lt; 3 slows many yeasts</td></tr>
+        <tr><td>Temperature</td><td>Often 20–30 °C optimum</td><td>Chill ≤ 4 °C; heat for kill</td><td>Some tolerate up to ~35 °C</td></tr>
+        <tr><td>Time</td><td>Longer time = more growth</td><td>Fast cooling; short holding</td><td>Doubling in hours (slower than bacteria)</td></tr>
+        <tr><td>Oxygen</td><td>Prefer O₂, can ferment without</td><td>Vacuum/MAP + low pH/sugar</td><td>Remember: facultative</td></tr>
+        <tr><td>Moisture (a<sub>w</sub>)</td><td>Grow at lower a<sub>w</sub> than bacteria</td><td>Drying; sugar/salt; low a<sub>w</sub></td><td>Many yeasts need **a<sub>w</sub> ≥ ~0.88**</td></tr>
+      </table>
+    </section>
+
+    <section class="grid grid-2">
+      <div>
+        <h2>5) Temperature • Moisture • Time — Quick View</h2>
+        <table>
+          <tr><th>Control item</th><th>Student number</th></tr>
+          <tr><td>Chill storage</td><td>≤ <b>4 °C</b></td></tr>
+          <tr><td>General safe cooking</td><td>≥ <b>75 °C</b> core</td></tr>
+          <tr><td>Cooling rule</td><td>60→21 °C in ~2 h; to ≤4 °C in ~4 h</td></tr>
+          <tr><td>Water activity (a<sub>w</sub>)</td><td>Yeasts **≥ 0.88** (approx.)</td></tr>
+          <tr><td>pH comfort</td><td>~3–6 (acid friendly)</td></tr>
+        </table>
+      </div>
+      <div>
+        <h2>6) Growth Pattern (Curve)</h2>
+        <pre class="ascii">Cells
+│        ┌────────── Log (rapid growth) ───────────┐
+│  Lag ──┘                                         └─ Stationary ── Death
+└──────────────────────── Time ───────────────────────────────────────────
+Tips: keep cold to extend <Lag>, reduce sugar/a<sub>w</sub>, acidify, or heat to kill.
+</pre>
+      </div>
+    </section>
+
+    <section>
+      <h2>7) Yeasts in Foods — Useful vs Harmful</h2>
+      <div class="grid grid-2">
+        <div>
+          <h3>Beneficial (useful)</h3>
+          <table>
+            <tr><th>Group</th><th>What they do</th><th>Foods</th></tr>
+            <tr><td><i>Saccharomyces</i></td><td>CO₂ for rise; alcohol</td><td>Bread, beer, wine</td></tr>
+            <tr><td><i>Kluyveromyces</i></td><td>Lactose use; aroma</td><td>Some dairy ferments</td></tr>
+          </table>
+        </div>
+        <div>
+          <h3>Harmful (spoilage)</h3>
+          <table>
+            <tr><th>Type</th><th>Example</th><th>Clue</th></tr>
+            <tr><td>Osmophilic yeast</td><td><i>Zygosaccharomyces</i></td><td>Survives high sugar + acid (jams/cordials)</td></tr>
+            <tr><td>Film-forming</td><td><i>Pichia, Candida</i></td><td>Surface film, gas, off-flavors</td></tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>8) Identify Quickly (Kitchen/Lab clues)</h2>
+      <table>
+        <tr><th>Clue</th><th>Yeast</th><th>Not to confuse with</th></tr>
+        <tr><td>Microscope</td><td>Oval cells with **budding**</td><td>Bacteria = tiny rods/cocci; moulds = hyphae</td></tr>
+        <tr><td>On foods</td><td>Surface film/foam in sugary liquids</td><td>Moulds are fuzzy/filamentous</td></tr>
+        <tr><td>Odor</td><td>Yeasty/alcoholic</td><td>Moulds = musty; bacteria = putrid/sour</td></tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>9) Control — “Hurdle Technology”</h2>
+      <table>
+        <tr><th>Goal</th><th>Method (simple)</th><th>Food example</th></tr>
+        <tr><td>Kill</td><td>Heat (pasteurize/boil); filtration (juices)</td><td>Juices, syrups</td></tr>
+        <tr><td>Slow</td><td>Chill ≤ 4 °C; shorten holding time</td><td>Bakeries, retail</td></tr>
+        <tr><td>Lower a<sub>w</sub></td><td>Concentrate/dry; add sugar/salt (with care)</td><td>Jams, dried fruits</td></tr>
+        <tr><td>Acidify</td><td>Fermentation; add safe acids</td><td>Pickles, beverages</td></tr>
+        <tr><td>Limit O₂</td><td>Vacuum/MAP + low pH</td><td>Packaged foods</td></tr>
+        <tr><td>Hygiene</td><td>GHP/GMP; clean equipment</td><td>All processing</td></tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>10) Top 10 Key Terms (Glossary)</h2>
+      <table>
+        <tr><th>Term</th><th>Student-friendly meaning</th></tr>
+        <tr><td>Budding</td><td>New yeast cell grows as a small bulge on parent</td></tr>
+        <tr><td>Facultative anaerobe</td><td>Can use oxygen or ferment without it</td></tr>
+        <tr><td>Fermentation</td><td>Sugars → alcohol + CO₂ (bread/wine/beer)</td></tr>
+        <tr><td>Osmophilic</td><td>Loves high sugar; survives in jams/syrups</td></tr>
+        <tr><td>Starter culture</td><td>Selected microbes added to start fermentation</td></tr>
+        <tr><td>Invertase</td><td>Yeast enzyme that splits sucrose → glucose + fructose</td></tr>
+        <tr><td>Ethanol</td><td>Alcohol made during fermentation</td></tr>
+        <tr><td>Leavening</td><td>CO₂ gas makes dough rise</td></tr>
+        <tr><td>a<sub>w</sub> (water activity)</td><td>“Free water” available for microbial growth</td></tr>
+        <tr><td>Spoilage</td><td>Undesirable changes in food (odor, gas, film)</td></tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>11) Last-Minute Q & A</h2>
+      <table>
+        <tr><th>Question</th><th>One-line answer</th></tr>
+        <tr><td>Typical yeast size?</td><td>~3–10 µm (bigger than bacteria)</td></tr>
+        <tr><td>pH comfort zone?</td><td>~3–6 (acid friendly)</td></tr>
+        <tr><td>Minimum a<sub>w</sub>?</td><td>≈ 0.88 for many yeasts</td></tr>
+        <tr><td>Optimum temp?</td><td>~20–30 °C for many strains</td></tr>
+        <tr><td>Key spoilage yeast in sugary foods?</td><td><i>Zygosaccharomyces</i></td></tr>
+        <tr><td>Why yeasts in bread?</td><td>CO₂ leavening + flavor</td></tr>
+      </table>
+    </section>
+
+    <footer>Prepared for Class 11–12 • Use with your local <code>yeast.png</code> in the same folder</footer>
+  </main>
+</body>
+</html>
